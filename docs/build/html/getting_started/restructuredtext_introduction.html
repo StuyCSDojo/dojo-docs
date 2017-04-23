@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to reStructuredText &mdash; Dojo Documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Dojo Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Introduction to MongoDB" href="mongodb_introduction.html"/>
+        <link rel="prev" title="Advance Python" href="advance_python.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dojo Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Environment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/preparing_environment.html">Preparing the Developer Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-git-and-clone-repos">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-configure">Install Python and Configure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#download-and-configure-mongodb">Download and Configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-and-creating-virtualenv">Installing and Creating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#unix">Unix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-git">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-pip">Install Python and Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-and-configure-mongodb">Install and configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#creating-and-activating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#school-linux">School Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#cloning-repos">Cloning Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-creating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/running_app.html">Running the Flask App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#locally">Locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#activate-the-virtualenv">Activate the Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#running-the-app">Running the App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#accessing-the-site">Accessing the Site</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#publicly">Publicly</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flask_introduction.html">Introduction to Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-layout">Flask Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#basic-flask">Basic Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-routes">Flask Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-templates">Flask Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-advance-routes">Flask Advance Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-blueprints">Flask Blueprints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advance_python.html">Advance Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#default-arguments">Default Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#string-formatting">String Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#python-decorators">Python Decorators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#components-of-decorators">Components of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#basic-decorators">Basic Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#order-of-decorators">Order of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#passing-arguments-to-decorators">Passing Arguments to Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#debugging-decorators">Debugging Decorators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#python-classes">Python Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-rest">What is reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-use-rest">Why use reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-toctree">Introduction to Toctree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#editing-rest-files">Editing reST Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-rest-directives">Basic reST Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-the-source">Building the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#fixing-the-search-bar">Fixing the Search Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-links">Additional Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mongodb_introduction.html">Introduction to MongoDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gunicorn_nginx_communication.html">Gunicorn and Nginx Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gunicorn_nginx_communication.html#benefits-of-nginx">Benefits of Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gunicorn_nginx_communication.html#server-communication">Server Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#port-filtering">Port Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#location-filtering">Location Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dojo Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction to reStructuredText</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-restructuredtext">
+<h1>Introduction to reStructuredText<a class="headerlink" href="#introduction-to-restructuredtext" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#restructuredtext-introduction-what-is-rst"><span class="std std-ref">What is reST</span></a></li>
+<li><a class="reference internal" href="#restructuredtext-introduction-why-use-rst"><span class="std std-ref">Why use reST</span></a></li>
+<li><a class="reference internal" href="#restructuredtext-introduction-introduction-to-toctree"><span class="std std-ref">Introduction to Toctree</span></a></li>
+<li><a class="reference internal" href="#restructuredtext-introduction-editing-rst-files"><span class="std std-ref">Editing reST Files</span></a></li>
+<li><a class="reference internal" href="#restructuredtext-introduction-basic-rst-directives"><span class="std std-ref">Basic reST Directives</span></a></li>
+<li><a class="reference internal" href="#restructuredtext-introduction-building-the-source"><span class="std std-ref">Building the Source</span></a></li>
+<li><a class="reference internal" href="#restructuredtext-introduction-fixing-the-search-bar"><span class="std std-ref">Fixing the Search Bar</span></a></li>
+<li><a class="reference internal" href="#restructuredtext-introduction-additional-links"><span class="std std-ref">Additional Links</span></a></li>
+</ul>
+<div class="section" id="what-is-rest">
+<span id="restructuredtext-introduction-what-is-rst"></span><h2>What is reST<a class="headerlink" href="#what-is-rest" title="Permalink to this headline">¶</a></h2>
+<p><strong>reStructuredText</strong> (reST) is a readable, unobtrusive, and powerful markup syntax commonly use to build
+in-line program documentation or simple web pages.  <strong>Sphinx</strong> is a tool that parses and converts
+reStructuredText source files into various formats such as HTML, LaTex, and manual pages.</p>
+</div>
+<div class="section" id="why-use-rest">
+<span id="restructuredtext-introduction-why-use-rst"></span><h2>Why use reST<a class="headerlink" href="#why-use-rest" title="Permalink to this headline">¶</a></h2>
+<p>There are many advantages to using reST:</p>
+<ul class="simple">
+<li>Clean and Readable</li>
+<li>Extensible<ul>
+<li>Define your own custom roles and directives</li>
+</ul>
+</li>
+<li>Powerful Facilities<ul>
+<li>Features extra utilities such as admonition (note, caution, danger, tip, important, and etc)</li>
+<li>Allows the inclusion of footnotes very easily</li>
+<li>Easy syntax highlighting for codeblocks</li>
+<li>And more...</li>
+</ul>
+</li>
+<li>Consistent with the format produced by sphinx-apidoc which extracts documentation from Python docstring
+and writes it in reST format</li>
+<li>Capable of doing everything HTML can and more</li>
+</ul>
+<p>Minor disadvantages:</p>
+<ul class="simple">
+<li>Not widely known</li>
+<li>Requires additional libraries</li>
+</ul>
+</div>
+<div class="section" id="introduction-to-toctree">
+<span id="restructuredtext-introduction-introduction-to-toctree"></span><h2>Introduction to Toctree<a class="headerlink" href="#introduction-to-toctree" title="Permalink to this headline">¶</a></h2>
+<p>A &#8220;TOC tree&#8221; is a tree of individual TOCs (Table of Contents) which is reflected on the sidenav.  When you
+expand the project, make sure to insert an entry into the toctree of the index file.  Otherwise, your file
+would not be accessible to the general public.
+<br />
+The syntax for a toctree is as follows:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>.. toctree::
+   :maxdepth: &lt;int&gt;
+   :caption: &lt;string&gt;
+
+   entry_1
+   entry_2
+   entry_3
+</pre></div>
+</div>
+<p><code class="docutils literal"><span class="pre">:maxdepth:</span></code> and <code class="docutils literal"><span class="pre">:caption:</span></code> are optional and controls how many levels to show and the title of the
+toctree respectively.  It is important to insert a newline before specifying the entries of the toctree.
+The name of each entry is the name of the file you want to include without the file extension.  The
+title of the file would be rendered in place of the filename.</p>
+</div>
+<div class="section" id="editing-rest-files">
+<span id="restructuredtext-introduction-editing-rst-files"></span><h2>Editing reST Files<a class="headerlink" href="#editing-rest-files" title="Permalink to this headline">¶</a></h2>
+<p>The reST source files are located in the source directory at the root of the project folders.  Currently
+the path to the project folders are as followed:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>// Documentation of the Dojo Website (Repo path)
+dojo-docs/docs
+
+// Documentation of the Dojo Website (On the web server)
+/projects/dojo-docs/docs
+
+// Resource materials for the Dojo Website (Repo path)
+dojo-resources/private_resources
+dojo-resources/public_resources
+
+// Resource materials for the Dojo Website (On the web server)
+/projects/dojo-resources/private_resources
+/projects/dojo-resources/public_resources
+</pre></div>
+</div>
+<p>When you first start out...</p>
+<ul class="simple">
+<li>Focus about the textual portion and forget about the styling</li>
+<li>Come up with headings and subheadings that summarize each sections/subsections</li>
+<li>Mentally mark or physically note the places where a code block would be appropriate</li>
+<li>After planning out the design, proceed to the next section for a quick run through of common reST
+directives.</li>
+</ul>
+</div>
+<div class="section" id="basic-rest-directives">
+<span id="restructuredtext-introduction-basic-rst-directives"></span><h2>Basic reST Directives<a class="headerlink" href="#basic-rest-directives" title="Permalink to this headline">¶</a></h2>
+<p>Here you will find a list of the more commonly used reST directives <a class="footnote-reference" href="#f2" id="id1">[1]</a>.  Check the
+<a class="reference internal" href="#restructuredtext-introduction-additional-links"><span class="std std-ref">Additional Links</span></a> section for more directives.</p>
+<ul>
+<li><p class="first"><strong>Paragraphs</strong></p>
+<ul class="simple">
+<li>Indentation is very important.  All lines of a paragraph must be on the same indentation level.</li>
+</ul>
+</li>
+<li><p class="first"><strong>Headers</strong></p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">The punctuation character must span at least as long as the header text.</p>
+</div>
+<ul>
+<li><p class="first">Use the following conventions for creating section headers:</p>
+<ul class="simple">
+<li>For the main header, underline the header text with the &#8220;=&#8221; character</li>
+<li>For the section headers, underline the header text with the &#8220;-&#8221; character</li>
+<li>For the subsection headers, underline the header text with the &#8220;^&#8221; character</li>
+</ul>
+<p>We will be using the &#8220;=&#8221; character for the title of the page, the &#8220;-&#8221; for section headers, and the
+&#8220;^&#8221; character for the subsections.</p>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Inline Markups</strong></p>
+<ul class="simple">
+<li>One asterisk: *text* for emphasis (italics)</li>
+<li>Two asterisks: **text** for strong emphasis (bold)</li>
+<li>Backquotes: ``text`` for code samples</li>
+</ul>
+</li>
+<li><p class="first"><strong>Code Blocks</strong>
+<br />
+For longer sample of code, user code blocks instead of code samples.  Here is an example:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Some text here
+::
+
+   This starts the code block, make sure to leave a newline after the ::
+   Anything on the same indentation level would be interpreted as part of
+   the code block.
+
+Normal text starts here
+</pre></div>
+</div>
+<p>To change the syntax  highlighting, insert  the following directive:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>.. highlight:: &lt;language/none&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The directive changes the syntax highlighting for all code blocks after it until the next
+usage of the directive.</p>
+</div>
+</li>
+<li><p class="first"><strong>Admonitions</strong>
+<br />
+One of the additional features offered by reST, it is useful for making a block of text as special.
+The syntax is as follow:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>.. &lt;admonition type&gt;::
+   The text that you want to render with the admonitions.
+</pre></div>
+</div>
+<p>The following admonition types are available: attention, caution, danger, error, hint, important, note,
+tip, and warning.</p>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">This is an example of an admonition...  Use them to attract the reader&#8217;s attention.</p>
+</div>
+</li>
+<li><p class="first"><strong>Links</strong>
+<br />
+There are two form of links:</p>
+<ul>
+<li><p class="first">External Links:</p>
+<ul>
+<li><p class="first">If all you want to display is the web address, just insert the link as is</p>
+</li>
+<li><p class="first">Otherwise, use the following syntax for an external link: <code class="docutils literal"><span class="pre">`Text</span> <span class="pre">to</span> <span class="pre">display</span> <span class="pre">&lt;link&gt;`_</span></code></p>
+</li>
+<li><p class="first">Here is an example:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Here is an example of a `link &lt;dojo.stuycs.org&gt;`_ to the best site ever.
+Check it out!
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">Internal Links:
+<br />
+Internal links have two components</p>
+<ul class="simple">
+<li>One to describe the destination utilizing the following syntax: <code class="docutils literal"><span class="pre">..</span> <span class="pre">_&lt;insert</span> <span class="pre">label&gt;:</span></code></li>
+<li>One to describe the link to the destination utilizing the following syntax: <code class="docutils literal"><span class="pre">:ref:`&lt;insert</span> <span class="pre">label&gt;`</span></code></li>
+</ul>
+<p>Here is an example:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>.. _link_to_section:
+
+Section to reference
+--------------------
+
+It referes to itself, see :ref:`link_to_section`
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first"><strong>Images</strong>
+<br />
+If you ever need to insert an image, use the following syntax:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>.. image:: &lt;path/to/image&gt;                           // the path of the image is relative to the file
+   :height: length                                   // height of the image, ie 100px (this attribute is optional)
+   :width: length or percentage                      // width of the image, ie 50px or 50% (this attribute is optional)
+   :scale: percentage                                // scaling factor of the image, ie 50% (this attribute is optional)
+   :alt: text                                        // text to show if the image is not found, ie Cool image! (this attribute is optional)
+   :align: top, middle, bottom, left, center, right  // align the image, ie right (this attribute is optional)
+   :target: text                                     // link the image to an url, ie https://www.google.com (this attribute is optional)
+</pre></div>
+</div>
+</li>
+<li><p class="first"><strong>Custom Directives</strong>
+<br />
+It is possible to create your own directives (possibly for inserting HTML code) with the following
+syntax:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>// Insert your custom directive code here
+
+.. |&lt;name&gt;| raw:: &lt;language&gt; (&lt;language&gt; should typically be html or latex)
+
+   // your language code here
+</pre></div>
+</div>
+<p>Here is an example:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>.. |br| raw:: html
+
+   &lt;br /&gt;
+
+Introduction to reST
+====================
+</pre></div>
+</div>
+<p>When you need to use the custom directive defined above, simply use <code class="docutils literal"><span class="pre">|br|</span></code>.</p>
+</li>
+</ul>
+<p class="rubric">Footnotes</p>
+<table class="docutils footnote" frame="void" id="f2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>A few examples were taken from <a class="reference external" href="http://www.sphinx-doc.org/en/stable/rest.html">the reST primer</a>.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="building-the-source">
+<span id="restructuredtext-introduction-building-the-source"></span><h2>Building the Source<a class="headerlink" href="#building-the-source" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">If you have not done so, activate the virtualenv</p>
+</li>
+<li><p class="first">Navigate to the root of the project folder (directory with the MakeFile and make.bat)</p>
+</li>
+<li><p class="first">On Windows, run:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\Username&gt; make.bat html
+</pre></div>
+</div>
+</li>
+<li><p class="first">On Unix, run:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ make html
+</pre></div>
+</div>
+</li>
+<li><p class="first">If the command &#8220;make&#8221; is not found, follow the <a class="reference external" href="/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_make.html">Installing Make</a> guide to install it.</p>
+<p>Once you are able to run <code class="docutils literal"><span class="pre">make.bat</span> <span class="pre">html</span></code> or <code class="docutils literal"><span class="pre">make</span> <span class="pre">html</span></code>, check to make sure that the build did not
+resulted in any warnings.  These typically appear near the middle of the output.  Aim to fix all
+warnings if possible.  Typical warnings include, but are not limited to:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">WARNING:</span> <span class="pre">Explicit</span> <span class="pre">markup</span> <span class="pre">ends</span> <span class="pre">without</span> <span class="pre">a</span> <span class="pre">blank</span> <span class="pre">line;</span> <span class="pre">unexpected</span> <span class="pre">unindent.</span></code>: You need to insert a
+blank line before the specified line number</li>
+<li><code class="docutils literal"><span class="pre">WARNING:</span> <span class="pre">Title</span> <span class="pre">underline</span> <span class="pre">too</span> <span class="pre">short</span></code>: You need to make sure that the row of symbols following the
+line specified is as long as the text on the line specified</li>
+</ul>
+<p>Once you have successfully build the pages, you may proceed to the next step.  Otherwise, use trial and
+error to learn what is wrong and how to fix it.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="fixing-the-search-bar">
+<span id="restructuredtext-introduction-fixing-the-search-bar"></span><h2>Fixing the Search Bar<a class="headerlink" href="#fixing-the-search-bar" title="Permalink to this headline">¶</a></h2>
+<p>By default, the search bar included by Sphinx for the HTML pages uses the reST files as the source to
+search through.  This causes search results to be cluttered by reST directives.  At the root of the git
+repo, you will find extract_source_from_html.py inside the extra_utilities folder.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Only run the script after a successful build (without warnings), otherwise the script may crash due to
+nonexistent or broken HTML files.</p>
+</div>
+<p>To run the script:</p>
+<ul class="simple">
+<li>Navigate to the directory containing extract_source_from_html.py</li>
+<li>Depending on which sections you updated...<ul>
+<li>Only the resources section: <code class="docutils literal"><span class="pre">python</span> <span class="pre">extract_source_from_html.py</span> <span class="pre">--resources</span></code></li>
+<li>Only the docs section: <code class="docutils literal"><span class="pre">python</span> <span class="pre">extract_source_from_html.py</span> <span class="pre">--docs</span></code></li>
+<li>Both sections: <code class="docutils literal"><span class="pre">python</span> <span class="pre">extract_source_from_html.py</span> <span class="pre">--all</span></code></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="additional-links">
+<span id="restructuredtext-introduction-additional-links"></span><h2>Additional Links<a class="headerlink" href="#additional-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>For a quick reference to more reST directives, check out the <a class="reference external" href="http://www.sphinx-doc.org/en/stable/rest.html#">reST primer</a></li>
+<li>For a more detailed and complete list, check the documentation from <a class="reference external" href="http://docutils.sourgeforge.net/docs/ref/rst/directives.html">docutils</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="mongodb_introduction.html" class="btn btn-neutral float-right" title="Introduction to MongoDB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="advance_python.html" class="btn btn-neutral" title="Advance Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, PChan, Kenneth, Shakil, Jake, Leo, WX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

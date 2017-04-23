@@ -1,0 +1,584 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Preparing the Developer Environment &mdash; Dojo Documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Dojo Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Running the Flask App" href="running_app.html"/>
+        <link rel="prev" title="Welcome to Dojo Website’s documentation!" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dojo Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Environment</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Preparing the Developer Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install-git-and-clone-repos">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-python-and-configure">Install Python and Configure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-and-configure-mongodb">Download and Configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-and-creating-virtualenv">Installing and Creating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#unix">Unix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-environment-unix-installing-git">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-python-and-pip">Install Python and Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-and-configure-mongodb">Install and configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-and-activating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-environment-unix-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#school-linux">School Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cloning-repos">Cloning Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-environment-school-linux-creating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preparing-environment-school-linux-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="running_app.html">Running the Flask App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="running_app.html#locally">Locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="running_app.html#activate-the-virtualenv">Activate the Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_app.html#running-the-app">Running the App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="running_app.html#accessing-the-site">Accessing the Site</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="running_app.html#publicly">Publicly</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/flask_introduction.html">Introduction to Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-layout">Flask Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#basic-flask">Basic Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-routes">Flask Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-templates">Flask Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-advance-routes">Flask Advance Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-blueprints">Flask Blueprints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/advance_python.html">Advance Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#default-arguments">Default Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#string-formatting">String Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#python-decorators">Python Decorators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#components-of-decorators">Components of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#basic-decorators">Basic Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#order-of-decorators">Order of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#passing-arguments-to-decorators">Passing Arguments to Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#debugging-decorators">Debugging Decorators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#python-classes">Python Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html">Introduction to reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#what-is-rest">What is reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#why-use-rest">Why use reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#introduction-to-toctree">Introduction to Toctree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#editing-rest-files">Editing reST Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#basic-rest-directives">Basic reST Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#building-the-source">Building the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#fixing-the-search-bar">Fixing the Search Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#additional-links">Additional Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/mongodb_introduction.html">Introduction to MongoDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html">Gunicorn and Nginx Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#benefits-of-nginx">Benefits of Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#server-communication">Server Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#port-filtering">Port Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#location-filtering">Location Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dojo Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Preparing the Developer Environment</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="preparing-the-developer-environment">
+<h1>Preparing the Developer Environment<a class="headerlink" href="#preparing-the-developer-environment" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#preparing-environment-windows"><span class="std std-ref">Windows</span></a><ul>
+<li><a class="reference internal" href="#preparing-environment-windows-installing-git"><span class="std std-ref">Install Git and Clone Repos</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-windows-installing-python"><span class="std std-ref">Install Python and Configure</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-windows-installing-mongodb"><span class="std std-ref">Download and Configure MongoDB</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-windows-installing-virtualenv"><span class="std std-ref">Installing and Creating Virtualenv</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-windows-installing-dependencies"><span class="std std-ref">Installing Dependencies</span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#preparing-environment-unix"><span class="std std-ref">Unix</span></a><ul>
+<li><a class="reference internal" href="#preparing-environment-unix-installing-git"><span class="std std-ref">Install Git and Clone Repos</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-unix-installing-python"><span class="std std-ref">Install Python and Pip</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-unix-installing-mongodb"><span class="std std-ref">Install and configure MongoDB</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-unix-installing-virtualenv"><span class="std std-ref">Creating and Activating Virtualenv</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-unix-installing-dependencies"><span class="std std-ref">Installing Dependencies</span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#preparing-environment-school-linux"><span class="std std-ref">School Linux</span></a><ul>
+<li><a class="reference internal" href="#preparing-environment-school-linux-cloning-repos"><span class="std std-ref">Cloning Repos</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-school-linux-creating-virtualenv"><span class="std std-ref">Creating and Activating Virtualenv</span></a></li>
+<li><a class="reference internal" href="#preparing-environment-school-linux-installing-dependencies"><span class="std std-ref">Installing Dependencies</span></a></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="windows">
+<span id="preparing-environment-windows"></span><h2>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><code class="docutils literal"><span class="pre">C:\Users\Username&gt;</span></code> signals that you should enter the commands afterward in the command prompt.</p>
+</div>
+<div class="section" id="install-git-and-clone-repos">
+<span id="preparing-environment-windows-installing-git"></span><h3>Install Git and Clone Repos<a class="headerlink" href="#install-git-and-clone-repos" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">If you do not have Git installed, check the
+<a class="reference external" href="/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_git.html#installation-programming-tools-git-windows">Installing Git</a> guide for instructions</p>
+</li>
+<li><p class="first">For a brief introduction to Git, check the
+<a class="reference external" href="/testing/private/resources/software_installation_and_tips/software_tutorials/programming_tools/git_tutorial.html">Introduction to Git</a> guide</p>
+</li>
+<li><p class="first">It is also recommended to set up SSH keys, information can be found in the
+<a class="reference external" href="/testing/private/resources/software_installation_and_tips/software_tutorials/remote_file_transfer/ssh_keys_tutorial.html">SSH Keys</a> guide</p>
+</li>
+<li><p class="first">Create a folder for the project and clone the Dojo Website repos inside that directory by running the
+following commands in powershell or command prompt:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\Username&gt; mkdir &lt;name of directory&gt;
+C:\Users\Username&gt; cd &lt;name of directory&gt;
+C:\Users\Username&gt; git clone git@github.com:StuyCSDojo/dojo-website.git
+C:\Users\Username&gt; git clone git@github.com:StuyCSDojo/dojo-docs.git
+C:\Users\Username&gt; git clone git@github.com:StuyCSDojo/dojo-resources.git
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="install-python-and-configure">
+<span id="preparing-environment-windows-installing-python"></span><h3>Install Python and Configure<a class="headerlink" href="#install-python-and-configure" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">If you do not have Python installed or your version is not at least 2.7.9, follow the instructions
+<a class="reference external" href="https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html#installation-programming-languages-python-pip-windows">here</a> (uninstall the old version if necessary)</p>
+</li>
+<li><p class="first">At this point, if you are still using a previous installation, make sure that Python and Pip are on your
+path.  To check, run the following commands:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\Username&gt; python --version
+C:\Users\Username&gt; pip --version
+</pre></div>
+</div>
+<p>If the first command gave you an error, add <code class="docutils literal"><span class="pre">C:\Python27</span></code> to your path.  If the second command gave
+you an error, add <code class="docutils literal"><span class="pre">C:\Python27\Scripts</span></code>.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Not sure how to add a directory to your path?  Read the <a class="reference external" href="https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/software_tutorials/system/modifying_windows_path_tutorial.html">Modifying Windows Path guide</a>.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="download-and-configure-mongodb">
+<span id="preparing-environment-windows-installing-mongodb"></span><h3>Download and Configure MongoDB<a class="headerlink" href="#download-and-configure-mongodb" title="Permalink to this headline">¶</a></h3>
+<p>MongoDB is the database that we are using to store user credentials along with the announcements on the
+homepage that is taught during second semester of Software Development.  Check the <a class="reference external" href="https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html#windows">Installing MongoDB</a> guide for instructions on installing it.</p>
+</div>
+<div class="section" id="installing-and-creating-virtualenv">
+<span id="preparing-environment-windows-installing-virtualenv"></span><h3>Installing and Creating Virtualenv<a class="headerlink" href="#installing-and-creating-virtualenv" title="Permalink to this headline">¶</a></h3>
+<p>The virtualenv module:</p>
+<ul class="simple">
+<li>Allows you to create isolated python environments to install libraries without cluttering the system</li>
+<li>Allows you to test for compatibility with newer libraries without breaking current products</li>
+</ul>
+<p>If you installed Anaconda Python, you can skip the installation step.  Otherwise, run the following
+command in the command prompt or powershell:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\Username&gt; pip install virtualenv
+</pre></div>
+</div>
+<p>In the directory where you clone the dojo-website repository, create a virtualenv.  The general syntax for
+creating a virtualenv is:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\Username&gt; virtualenv &lt;name of virtualenv&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The parameter for the <code class="docutils literal"><span class="pre">virtualenv</span></code> command is simply a name of your choice.  The result of the
+command would be a directory.</p>
+</div>
+</div>
+<div class="section" id="installing-dependencies">
+<span id="preparing-environment-windows-installing-dependencies"></span><h3>Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>If you are using Anaconda Python, you are good to go as the dependencies are already installed!
+Otherwise...</p>
+<ul>
+<li><p class="first">Activate the virtualenv with the following commands:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\Username&gt; cd &lt;path\to\virtualenv\created\in\previous\step&gt;
+C:\Users\Username&gt; cd &lt;name of virtualenv&gt;
+C:\Users\Username&gt; Scripts\activate
+</pre></div>
+</div>
+</li>
+<li><p class="first">Install the dependencies with the following command:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>C:\Users\Username&gt; pip install -r ..\dojo-website\app\requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The requirements.txt file contains a list of dependencies in a format readable by Pip and humans.</p>
+</div>
+</div>
+</div>
+<div class="section" id="unix">
+<span id="preparing-environment-unix"></span><h2>Unix<a class="headerlink" href="#unix" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="preparing-environment-unix-installing-git">
+<span id="id1"></span><h3>Install Git and Clone Repos<a class="headerlink" href="#preparing-environment-unix-installing-git" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">If you do not already have Git installed, check the <a class="reference external" href="https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_git.html">Installing Git guide</a></p>
+</li>
+<li><p class="first">For a brief introduction to Git, check the <a class="reference external" href="https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/software_tutorials/programming_tools/git_tutorial.html">Introduction to Git guide</a></p>
+</li>
+<li><p class="first">It is also recommended to set up SSH Keys, information can be found in the <a class="reference external" href="https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/software_tutorials/remote_file_transfer/ssh_keys_tutorial.html">SSH Keys guide</a></p>
+</li>
+<li><p class="first">Create a folder for the project and clone the Dojo Website repos inside that directory by running the
+following commands in the terminal:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ mkdir &lt;name of directory&gt;
+$ cd &lt;name of directory&gt;
+$ git clone git@github.com:StuyCSDojo/dojo-website.git
+$ git clone git@github.com:StuyCSDojo/dojo-docs.git
+$ git clone git@github.com:StuyCSDojo/dojo-resources.git
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="install-python-and-pip">
+<span id="preparing-environment-unix-installing-python"></span><h3>Install Python and Pip<a class="headerlink" href="#install-python-and-pip" title="Permalink to this headline">¶</a></h3>
+<p>Pip is the Python package manager that we would be using to install extra Python libraries.  For
+instructions on installing Pip and/or Python, check the <a class="reference external" href="https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html#linux">Installing Python and Pip guide</a>.</p>
+</div>
+<div class="section" id="install-and-configure-mongodb">
+<span id="preparing-environment-unix-installing-mongodb"></span><h3>Install and configure MongoDB<a class="headerlink" href="#install-and-configure-mongodb" title="Permalink to this headline">¶</a></h3>
+<p>MongoDB is the database that we are using to store user credentials along with the announcements on the
+homepage that is taught during second semester of Software Development.  Check the <a class="reference external" href="https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html#windows">Installing MongoDB
+guide</a> for instructions to installing it.</p>
+</div>
+<div class="section" id="creating-and-activating-virtualenv">
+<span id="preparing-environment-unix-installing-virtualenv"></span><h3>Creating and Activating Virtualenv<a class="headerlink" href="#creating-and-activating-virtualenv" title="Permalink to this headline">¶</a></h3>
+<p>Why use a virtualenv?</p>
+<ul class="simple">
+<li>Allows you to create isolated python environments to install libraries without cluttering the system</li>
+<li>Allows you to test for compatibility with newer libraries without breaking current products</li>
+<li>Allows you to install packages without admin privileges</li>
+</ul>
+<p>To install virtualenv, run the following command in the terminal:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ sudo pip install virtualenv
+</pre></div>
+</div>
+<p>In the directory where you clone the dojo-website repository, create a virtualenv.  The general syntax for
+creating a virtualenv is:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ virtualenv &lt;name of virtualenv&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The parameter for the <code class="docutils literal"><span class="pre">virtualenv</span></code> command is a name of your choice and would result in a directory
+with that name.</p>
+</div>
+</div>
+<div class="section" id="preparing-environment-unix-installing-dependencies">
+<span id="id2"></span><h3>Installing Dependencies<a class="headerlink" href="#preparing-environment-unix-installing-dependencies" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Activate the virtualenv:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ cd /path/to/virtualenv
+$ cd &lt;name of virtualenv&gt;
+$ source bin/activate
+</pre></div>
+</div>
+</li>
+<li><p class="first">Install the dependencies via Pip:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pip install -r ../dojo-website/app/requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The requirements.txt file contains a list of dependencies in a format readable by Pip and humans.</p>
+</div>
+</div>
+</div>
+<div class="section" id="school-linux">
+<span id="preparing-environment-school-linux"></span><h2>School Linux<a class="headerlink" href="#school-linux" title="Permalink to this headline">¶</a></h2>
+<p>The steps for preparing the developer environment on the cs lab machines are different from the standard
+installation of Linux.  Most tools are already installed and the rest can be installed via a virtualenv.</p>
+<div class="section" id="cloning-repos">
+<span id="preparing-environment-school-linux-cloning-repos"></span><h3>Cloning Repos<a class="headerlink" href="#cloning-repos" title="Permalink to this headline">¶</a></h3>
+<p>On the school machines, Git is already installed so we would start by cloning the repositories we need.
+Start by creating a directory to store all your Dojo Website work.  Inside that directory, you will need
+to run the following commands:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ git clone git@github.com:StuyCSDojo/dojo-docs.git
+$ git clone git@github.com:StuyCSDojo/dojo-resources.git
+$ git clone git@github.com:StuyCSDojo/dojo-website.git
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you need help regarding Git, check out the <a class="reference external" href="/testing/private/resources/software_installation_and_tips/software_tutorials/programming_tools/git_tutorial.html">Introduction to Git</a> guide.  To set up the SSH
+keys, check out <a class="reference external" href="/testing/private/resources/software_installation_and_tips/software_tutorials/remote_file_transfer/ssh_keys_tutorial.html">SSH Keys</a> guide.</p>
+</div>
+</div>
+<div class="section" id="preparing-environment-school-linux-creating-virtualenv">
+<span id="id5"></span><h3>Creating and Activating Virtualenv<a class="headerlink" href="#preparing-environment-school-linux-creating-virtualenv" title="Permalink to this headline">¶</a></h3>
+<p>Why use a virtualenv?</p>
+<ul class="simple">
+<li>Allows you to create isolated python environments to install libraries without cluttering the system</li>
+<li>Allows you to test for compatibility with newer libraries without breaking current products</li>
+<li>Allows you to install packages without admin privileges</li>
+</ul>
+<p>We would create a virtualenv at the root of the folder where you are doing your Dojo Website work.  The
+syntax for creating a virtualenv is:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ virtualenv &lt;name of virtualenv&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The parameter for the <code class="docutils literal"><span class="pre">virtualenv</span></code> command is a name of your choice and would result in a directory
+with that name.</p>
+</div>
+</div>
+<div class="section" id="preparing-environment-school-linux-installing-dependencies">
+<span id="id6"></span><h3>Installing Dependencies<a class="headerlink" href="#preparing-environment-school-linux-installing-dependencies" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Activate the virtualenv with the following commands:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ cd /path/to/virtualenv
+$ cd &lt;name of virtualenv&gt;
+$ source bin/activate
+</pre></div>
+</div>
+</li>
+<li><p class="first">Install the dependencies via Pip:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ pip install -r ../dojo-website/app/requirements.txt
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The requirements.txt file contains a list of dependencies in a format readable by Pip and humans.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="running_app.html" class="btn btn-neutral float-right" title="Running the Flask App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to Dojo Website’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, PChan, Kenneth, Shakil, Jake, Leo, WX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

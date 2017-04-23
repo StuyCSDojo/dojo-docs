@@ -1,0 +1,598 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Advance Python &mdash; Dojo Documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Dojo Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Introduction to reStructuredText" href="restructuredtext_introduction.html"/>
+        <link rel="prev" title="Introduction to Flask" href="flask_introduction.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dojo Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Environment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/preparing_environment.html">Preparing the Developer Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-git-and-clone-repos">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-configure">Install Python and Configure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#download-and-configure-mongodb">Download and Configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-and-creating-virtualenv">Installing and Creating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#unix">Unix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-git">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-pip">Install Python and Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-and-configure-mongodb">Install and configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#creating-and-activating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#school-linux">School Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#cloning-repos">Cloning Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-creating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/running_app.html">Running the Flask App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#locally">Locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#activate-the-virtualenv">Activate the Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#running-the-app">Running the App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#accessing-the-site">Accessing the Site</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#publicly">Publicly</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flask_introduction.html">Introduction to Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-layout">Flask Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#basic-flask">Basic Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-routes">Flask Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-templates">Flask Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-advance-routes">Flask Advance Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-blueprints">Flask Blueprints</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advance Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#default-arguments">Default Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#string-formatting">String Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-decorators">Python Decorators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#components-of-decorators">Components of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-decorators">Basic Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#order-of-decorators">Order of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#passing-arguments-to-decorators">Passing Arguments to Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debugging-decorators">Debugging Decorators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python-classes">Python Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="restructuredtext_introduction.html">Introduction to reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#what-is-rest">What is reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#why-use-rest">Why use reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#introduction-to-toctree">Introduction to Toctree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#editing-rest-files">Editing reST Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#basic-rest-directives">Basic reST Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#building-the-source">Building the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#fixing-the-search-bar">Fixing the Search Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#additional-links">Additional Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mongodb_introduction.html">Introduction to MongoDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gunicorn_nginx_communication.html">Gunicorn and Nginx Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gunicorn_nginx_communication.html#benefits-of-nginx">Benefits of Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gunicorn_nginx_communication.html#server-communication">Server Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#port-filtering">Port Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#location-filtering">Location Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dojo Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Advance Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="advance-python">
+<h1>Advance Python<a class="headerlink" href="#advance-python" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#advance-python-default-arguments"><span class="std std-ref">Default Arguments</span></a></li>
+<li><a class="reference internal" href="#advance-python-string-formatting"><span class="std std-ref">String Formatting</span></a></li>
+<li><a class="reference internal" href="#advance-python-list-comprehension"><span class="std std-ref">List Comprehension</span></a></li>
+<li><a class="reference internal" href="#advance-python-decorators"><span class="std std-ref">Python Decorators</span></a><ul>
+<li><a class="reference internal" href="#advance-python-decorators-components"><span class="std std-ref">Components of Decorators</span></a></li>
+<li><a class="reference internal" href="#advance-python-basic-decorators"><span class="std std-ref">Basic Decorators</span></a></li>
+<li><a class="reference internal" href="#advance-python-order-of-decorators"><span class="std std-ref">Order of Decorators</span></a></li>
+<li><a class="reference internal" href="#advance-python-decorators-with-arguments"><span class="std std-ref">Passing Arguments to Decorators</span></a></li>
+<li><a class="reference internal" href="#advance-python-debugging-decorators"><span class="std std-ref">Debugging Decorators</span></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#advance-python-classes"><span class="std std-ref">Python Classes</span></a></li>
+</ul>
+<div class="section" id="default-arguments">
+<span id="advance-python-default-arguments"></span><h2>Default Arguments<a class="headerlink" href="#default-arguments" title="Permalink to this headline">¶</a></h2>
+<p>In Python, it is possible to write functions that have optional parameters with default values.  The
+syntax is pretty straightforward:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func_name</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">arg2</span><span class="o">=</span><span class="n">value2</span><span class="p">):</span>
+    <span class="c1"># rest of function definition</span>
+</pre></div>
+</div>
+<p>Simply add an equal sign followed by the default value after the parameter the way you would normally
+define that variable.  Here is a more concrete example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;bob&#39;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span>
+
+<span class="nb">print</span> <span class="n">hello</span><span class="p">()</span>           <span class="c1"># Outputs: Hello bob!</span>
+<span class="nb">print</span> <span class="n">hello</span><span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">)</span>    <span class="c1"># Outputs: Hello World!</span>
+</pre></div>
+</div>
+<p>In the definition of <code class="docutils literal"><span class="pre">hello()</span></code> above, if you don&#8217;t provide a value for <code class="docutils literal"><span class="pre">name</span></code>, the function would
+simply assign to <code class="docutils literal"><span class="pre">name</span></code> the value of &#8216;bob&#8217;.  If you do provide a value, that value would overwrite the
+default value.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Any parameters with default values must be listed after all the parameters without default values.</p>
+</div>
+<p>Therefore, the following definition is not valid:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">func_name</span><span class="p">(</span><span class="n">arg</span><span class="o">=</span><span class="n">value</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">arg3</span><span class="o">=</span><span class="n">value2</span><span class="p">):</span>
+    <span class="c1"># rest of function declaration</span>
+</pre></div>
+</div>
+<p>On a slight digression, if you are not sure what is the order of the parameters, but you know which
+parameters you need to enter...</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">lastname</span><span class="p">,</span> <span class="n">firstname</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello &#39;</span> <span class="o">+</span> <span class="n">firstname</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">lastname</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span>
+
+<span class="n">hello</span><span class="p">(</span><span class="n">firstname</span><span class="o">=</span><span class="s1">&#39;bob&#39;</span><span class="p">,</span> <span class="n">lastname</span><span class="o">=</span><span class="s1">&#39;gates&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Using a similar syntax to declaring parameters with default values, it is possible to provide the
+arguments in a different order than it was defined without generating an error.</p>
+</div>
+<div class="section" id="string-formatting">
+<span id="advance-python-string-formatting"></span><h2>String Formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="list-comprehension">
+<span id="advance-python-list-comprehension"></span><h2>List Comprehension<a class="headerlink" href="#list-comprehension" title="Permalink to this headline">¶</a></h2>
+<p><em>List Comprehension</em> in Python allows you to construct lists in a easy and natural manner.  For example,
+if you want a list ranging from 0 to 9 inclusive, the way you learn to do it was:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">l</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">xrange()</span></code> function might be unfamiliar to you, but it is just a more memory efficient <code class="docutils literal"><span class="pre">range()</span></code>.
+<code class="docutils literal"><span class="pre">xrange()</span></code> takes the same parameters as <code class="docutils literal"><span class="pre">range()</span></code> and in the example above, we are generating a
+sequence that would run from 0 to 9.</p>
+<p>However, the aforementioned problem can also be solved with the following snippet:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>While difficult to read at first, you will find it pretty intuitive with some practice.  Let us go over
+each component...</p>
+<p>When you write <code class="docutils literal"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">xrange(10)</span></code>, you are declaring the variable <code class="docutils literal"><span class="pre">i</span></code> which will take on the values
+from 0 to 9 inclusive with each iteration of the loop.  The <code class="docutils literal"><span class="pre">i</span></code> between that snippet and <code class="docutils literal"><span class="pre">[</span></code> is the
+<em>output expression</em>.  The result of the <em>output expression</em> would become a member of the new list in the
+order in which it was generated.</p>
+<p>We can also utilize a slightly more complex form:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">xrange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span> <span class="n">l</span>
+</pre></div>
+</div>
+<p>In the above example, we are squaring the variable <code class="docutils literal"><span class="pre">i</span></code> and adding it to the list only if the expression
+<code class="docutils literal"><span class="pre">i</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span></code> is true.  Thus, the above example would evaluate to <code class="docutils literal"><span class="pre">[0,</span> <span class="pre">4,</span> <span class="pre">16,</span> <span class="pre">36,</span> <span class="pre">64]</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Any one line expression with valid syntax can be used for the <em>output expression</em>.  This does not
+include statements such as <code class="docutils literal"><span class="pre">if</span></code>, <code class="docutils literal"><span class="pre">return</span></code>, <code class="docutils literal"><span class="pre">print</span></code>, etc.</p>
+</div>
+</div>
+<div class="section" id="python-decorators">
+<span id="advance-python-decorators"></span><h2>Python Decorators<a class="headerlink" href="#python-decorators" title="Permalink to this headline">¶</a></h2>
+<p>Python decorators allows the programmer to dynamically alter the functionality of a function, method, or
+class without having to modify the original behavior of the code.  A couple of things to note before we
+cover decorators:</p>
+<div class="section" id="components-of-decorators">
+<span id="advance-python-decorators-components"></span><h3>Components of Decorators<a class="headerlink" href="#components-of-decorators" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Binding functions to variables</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;hello&#39;</span>
+
+<span class="n">say_hello</span> <span class="o">=</span> <span class="n">hello</span>
+<span class="nb">print</span> <span class="n">say_hello</span><span class="p">()</span>      <span class="c1"># Outputs: hello</span>
+<span class="nb">print</span> <span class="n">hello</span><span class="p">()</span>          <span class="c1"># Outputs: hello</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Defining functions inside other functions</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet_someone</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">retrieve_greeting</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;Hello, &#39;</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">retrieve_greeting</span><span class="p">()</span> <span class="o">+</span> <span class="n">name</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Treating a function as a parameter to other functions</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">name</span>
+
+<span class="k">def</span> <span class="nf">greet_someone</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="n">greet_someone</span><span class="p">(</span><span class="n">hello</span><span class="p">,</span> <span class="s1">&#39;bob&#39;</span><span class="p">)</span>    <span class="c1"># Outputs: Hello, bob</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Returning functions within a function</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_greeting</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">greeting</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;Hello there!&#39;</span>
+
+    <span class="k">return</span> <span class="n">greeting</span>
+
+<span class="nb">print</span> <span class="n">get_greeting</span><span class="p">()</span>    <span class="c1"># Outputs: Hello there!</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Closure: accessing variables/functions in the enclosing scope from an inner function</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_greeting</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">greeting</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;Hello there, &#39;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s1">&#39;!&#39;</span>
+
+    <span class="k">return</span> <span class="n">greeting</span>
+
+<span class="nb">print</span> <span class="n">get_greeting</span><span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">)</span>    <span class="c1"># Outputs: Hello there, bob!</span>
+</pre></div>
+</div>
+<p>In the example above, the inner function, <code class="docutils literal"><span class="pre">greeting()</span></code>, is able to access the <code class="docutils literal"><span class="pre">name</span></code> variable which
+lies in the scope/definition of the outer function.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Python only allows <strong>read access to the outer scope/definition</strong>.  You may not modify those variables.</p>
+</div>
+</div>
+<div class="section" id="basic-decorators">
+<span id="advance-python-basic-decorators"></span><h3>Basic Decorators<a class="headerlink" href="#basic-decorators" title="Permalink to this headline">¶</a></h3>
+<p>Now that you have been introduced to all the components of a decorator, here is an example of a basic
+decorator:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_message</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Lorem ipsum, bacon ipsum dolor amet chicken turducken salami&#39;</span>
+
+<span class="c1"># Decorator function</span>
+<span class="k">def</span> <span class="nf">add_p_tags</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;p&gt;</span><span class="si">{0}</span><span class="s1">&lt;/p&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">func</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">func_wrapper</span>
+
+<span class="n">decorated_with_p_tags</span> <span class="o">=</span> <span class="n">add_p_tags</span><span class="p">(</span><span class="n">get_message</span><span class="p">)</span>
+<span class="nb">print</span> <span class="n">decorated_with_p_tags</span><span class="p">()</span>
+<span class="c1"># Outputs: &lt;p&gt;Lorem ipsum, bacon ipsum dolor amet chicken turducken salami&lt;/p&gt;</span>
+</pre></div>
+</div>
+<p>Remember, a decorator is simply a function that wraps around another function to augment the work of the
+original function by generating a new function and returning that function so we can use it anywhere.</p>
+<p>However, the decorator as used above is really messy.  Here is an alternative and cleaner method:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_p_tags</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s1">&#39;&lt;p&gt;</span><span class="si">{0}</span><span class="s1">&lt;/p&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">func</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">func_wrapper</span>
+
+<span class="nd">@add_p_tags</span>
+<span class="k">def</span> <span class="nf">message</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s1">&#39;bacon ipsum, </span><span class="si">{0}</span><span class="s1"> dolor amet chicken turducken salami&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="n">message</span><span class="p">(</span><span class="s1">&#39;bob&#39;</span><span class="p">)</span>
+<span class="c1"># Outputs: bacon ipsum, bob dolor amet chicken turducken salami</span>
+</pre></div>
+</div>
+<p>Simply insert an &#8216;&#64;&#8217; symbol followed by the name of the decorator function before the function to be
+decorated.  Now, let us experiment with the ordering of the decorators.</p>
+</div>
+<div class="section" id="order-of-decorators">
+<span id="advance-python-order-of-decorators"></span><h3>Order of Decorators<a class="headerlink" href="#order-of-decorators" title="Permalink to this headline">¶</a></h3>
+<p>In general, Python decorators are evaluated from the bottom to the top.  If we were to have the following
+definition:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@add_strong_tags</span>
+<span class="nd">@add_p_tags</span>
+<span class="nd">@add_div_tags</span>
+<span class="k">def</span> <span class="nf">text</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;bacon ipsum&#39;</span>
+
+<span class="nb">print</span> <span class="n">text</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>First, the <code class="docutils literal"><span class="pre">add_div_tags</span></code> decorator would be applied, then the <code class="docutils literal"><span class="pre">add_p_tags</span></code> decorator, and finally the
+<code class="docutils literal"><span class="pre">add_strong_tags</span></code> decorator.  Therefore, running the last statement in the example above would give you:
+<code class="docutils literal"><span class="pre">&lt;strong&gt;&lt;p&gt;&lt;div&gt;bacon</span> <span class="pre">ipsum&lt;/div&gt;&lt;/p&gt;&lt;/strong&gt;</span></code>.  If we were to switch the order to:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@add_div_tags</span>
+<span class="nd">@add_p_tags</span>
+<span class="nd">@add_strong_tags</span>
+<span class="k">def</span> <span class="nf">text</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;bacon ipsum&#39;</span>
+
+<span class="nb">print</span> <span class="n">text</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The order of the decorators have been reversed, so the resulting output is now:
+<code class="docutils literal"><span class="pre">&lt;div&gt;&lt;p&gt;&lt;strong&gt;bacon</span> <span class="pre">ipsum&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</span></code>.</p>
+</div>
+<div class="section" id="passing-arguments-to-decorators">
+<span id="advance-python-decorators-with-arguments"></span><h3>Passing Arguments to Decorators<a class="headerlink" href="#passing-arguments-to-decorators" title="Permalink to this headline">¶</a></h3>
+<p>It will be useful to know how to pass arguments to decorators so that we will not need to write a
+different decorator for each tag.  To do this, we need to write a function that takes as many parameters
+as we need and generates a decorator on the fly.  Here&#8217;s the basic syntax:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decorator_generator</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">argn</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">actual_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="k">def</span> <span class="nf">inner_function</span><span class="p">():</span>
+            <span class="c1"># do something in the inner function</span>
+        <span class="k">return</span> <span class="n">inner_function</span>
+    <span class="k">return</span> <span class="n">actual_decorator</span>
+</pre></div>
+</div>
+<p>Here&#8217;s how you will use it:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nd">@decorator_generator</span><span class="p">(</span><span class="n">arg</span><span class="p">,</span> <span class="n">arg1</span><span class="p">,</span> <span class="n">arg2</span><span class="p">,</span> <span class="n">argn</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">function_to_be_decorated</span><span class="p">():</span>
+    <span class="c1"># do something inside the function</span>
+</pre></div>
+</div>
+<p>Instead of using the name of the actual decorator, we use the name of the decorator generator and pass to
+it the arguments it needs.  Then, it generates the actual decorator which wraps around
+<code class="docutils literal"><span class="pre">function_to_be_decorated()</span></code>.  <code class="docutils literal"><span class="pre">actual_decorator()</span></code> is written in the same manner as the basic
+decorator you were introduced to before.</p>
+</div>
+<div class="section" id="debugging-decorators">
+<span id="advance-python-debugging-decorators"></span><h3>Debugging Decorators<a class="headerlink" href="#debugging-decorators" title="Permalink to this headline">¶</a></h3>
+<p>When debugging decorators, you might find it problematic if you don&#8217;t have access to the name of the
+function, the name of the module, or the docstring.  This is because the attributes <code class="docutils literal"><span class="pre">__name__</span></code>,
+<code class="docutils literal"><span class="pre">__module__</span></code>, and <code class="docutils literal"><span class="pre">__doc__</span></code> are overridden by those of the wrapper (ie <code class="docutils literal"><span class="pre">func_wrapper</span></code>).  To access
+the original, we need to import the <code class="docutils literal"><span class="pre">wraps()</span></code> method from the <code class="docutils literal"><span class="pre">functools</span></code> module.  Here is an example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tags</span><span class="p">(</span><span class="n">tag_name</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">tags_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">():</span>
+            <span class="k">return</span> <span class="s1">&#39;&lt;</span><span class="si">{0}</span><span class="s1">&gt;</span><span class="si">{1}</span><span class="s1">&lt;/</span><span class="si">{0}</span><span class="s1">&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tag_name</span><span class="p">,</span> <span class="n">func</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">func_wrapper</span>
+    <span class="k">return</span> <span class="n">tags_decorator</span>
+
+<span class="nd">@tags</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_text</span><span class="p">():</span>
+    <span class="sd">&#39;&#39;&#39;return some text&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;hello&#39;</span>
+
+<span class="nb">print</span> <span class="n">get_text</span><span class="o">.</span><span class="vm">__name__</span>    <span class="c1"># Outputs: get_text</span>
+<span class="nb">print</span> <span class="n">get_text</span><span class="o">.</span><span class="vm">__module__</span>  <span class="c1"># Outputs: __main__</span>
+<span class="nb">print</span> <span class="n">get_text</span><span class="o">.</span><span class="vm">__doc__</span>     <span class="c1"># Outputs: return some text</span>
+</pre></div>
+</div>
+<p>By adding the line, <code class="docutils literal"><span class="pre">&#64;wraps(func)</span></code> to the definition of the decorator in the example above, we were able
+to access the original attributes (those of the function being wrapped around).</p>
+</div>
+</div>
+<div class="section" id="python-classes">
+<span id="advance-python-classes"></span><h2>Python Classes<a class="headerlink" href="#python-classes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="restructuredtext_introduction.html" class="btn btn-neutral float-right" title="Introduction to reStructuredText" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="flask_introduction.html" class="btn btn-neutral" title="Introduction to Flask" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, PChan, Kenneth, Shakil, Jake, Leo, WX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

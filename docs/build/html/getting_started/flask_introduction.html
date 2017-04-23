@@ -1,0 +1,632 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to Flask &mdash; Dojo Documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Dojo Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Advance Python" href="advance_python.html"/>
+        <link rel="prev" title="Running the Flask App" href="../developer_environment/running_app.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dojo Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Environment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/preparing_environment.html">Preparing the Developer Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-git-and-clone-repos">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-configure">Install Python and Configure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#download-and-configure-mongodb">Download and Configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-and-creating-virtualenv">Installing and Creating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#unix">Unix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-git">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-pip">Install Python and Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-and-configure-mongodb">Install and configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#creating-and-activating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#school-linux">School Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#cloning-repos">Cloning Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-creating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/running_app.html">Running the Flask App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#locally">Locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#activate-the-virtualenv">Activate the Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#running-the-app">Running the App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#accessing-the-site">Accessing the Site</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#publicly">Publicly</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#flask-layout">Flask Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-flask">Basic Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flask-routes">Flask Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flask-templates">Flask Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flask-advance-routes">Flask Advance Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flask-blueprints">Flask Blueprints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advance_python.html">Advance Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#default-arguments">Default Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#string-formatting">String Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#python-decorators">Python Decorators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#components-of-decorators">Components of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#basic-decorators">Basic Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#order-of-decorators">Order of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#passing-arguments-to-decorators">Passing Arguments to Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#debugging-decorators">Debugging Decorators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#python-classes">Python Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="restructuredtext_introduction.html">Introduction to reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#what-is-rest">What is reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#why-use-rest">Why use reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#introduction-to-toctree">Introduction to Toctree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#editing-rest-files">Editing reST Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#basic-rest-directives">Basic reST Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#building-the-source">Building the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#fixing-the-search-bar">Fixing the Search Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#additional-links">Additional Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mongodb_introduction.html">Introduction to MongoDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gunicorn_nginx_communication.html">Gunicorn and Nginx Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gunicorn_nginx_communication.html#benefits-of-nginx">Benefits of Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gunicorn_nginx_communication.html#server-communication">Server Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#port-filtering">Port Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#location-filtering">Location Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dojo Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction to Flask</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-flask">
+<h1>Introduction to Flask<a class="headerlink" href="#introduction-to-flask" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#flask-introduction-flask-layout"><span class="std std-ref">Flask Layout</span></a></li>
+<li><a class="reference internal" href="#flask-introduction-basic-flask"><span class="std std-ref">Basic Flask</span></a></li>
+<li><a class="reference internal" href="#flask-introduction-flask-routes"><span class="std std-ref">Flask Routes</span></a></li>
+<li><a class="reference internal" href="#flask-introduction-flask-templates"><span class="std std-ref">Flask Templates</span></a></li>
+<li><a class="reference internal" href="#flask-introduction-flask-advance-routes"><span class="std std-ref">Flask Advance Routes</span></a></li>
+<li><a class="reference internal" href="#flask-introduction-flask-blueprints"><span class="std std-ref">Flask Blueprints</span></a></li>
+</ul>
+<div class="section" id="flask-layout">
+<span id="flask-introduction-flask-layout"></span><h2>Flask Layout<a class="headerlink" href="#flask-layout" title="Permalink to this headline">¶</a></h2>
+<p>The standard Flask app directory tree looks something like:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Parent Directory/
+|___ app.py        // this Python file contains the code for running your app; may
+|                  // be renamed to something else
+|
+|___ templates     // has to be named &#39;templates&#39;; place all your html files here
+|
+|___ static        // only the &#39;static&#39; directory is open for public access; store
+|                  // all your js, css, images, and etc here
+|
+|___ utils/        // named &#39;utils&#39; by convention; place all your other Python code here
+|
+|___ data/         // named &#39;data&#39; by convention; place all your data files here
+</pre></div>
+</div>
+</div>
+<div class="section" id="basic-flask">
+<span id="flask-introduction-basic-flask"></span><h2>Basic Flask<a class="headerlink" href="#basic-flask" title="Permalink to this headline">¶</a></h2>
+<p>Let us start with a basic Flask app:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Import the Flask class from the flask module</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="c1"># Bind an instance of the Flask class to &#39;app&#39;.  The first argument is name of</span>
+<span class="c1"># the module allowing Flask to find your templates, static files, and etc.</span>
+<span class="c1"># Note: &#39;app&#39; is the name used by convention, but may differ</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># The route decorator is used to tell Flask what URL should run the function</span>
+<span class="c1"># The &#39;/&#39; denotes root and is the page that is loaded by default (aka the home page)</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>                    <span class="c1"># Standard function definition, name need not match the route</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello World!&#39;</span>      <span class="c1"># Return text that would be rendered in the browser</span>
+
+<span class="c1"># If the program is ran directly instead of imported...</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+
+    <span class="c1"># Turn on debugging, enabling more specific error messages and restart the Flask</span>
+    <span class="c1"># app upon code changes</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+
+    <span class="c1"># Run the app</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+
+    <span class="c1"># By default the host is 127.0.0.1 (localhost) and the port is 5000</span>
+    <span class="c1"># Access the site by entering host:port (127.0.0.1:5000) into your browser</span>
+
+    <span class="c1"># You may change the port or the host by giving app.run() extra parameters</span>
+    <span class="c1"># Ex: app.run(host=&#39;192.0.0.1&#39;, port=8000) would change the address to 192.0.0.1:8000</span>
+
+    <span class="c1"># Note: Ports under 1024 are restricted to those with sudo access on Unix machines</span>
+    <span class="c1">#       port 80 is the default HTTP port</span>
+    <span class="c1">#       port 443 is the default HTTPS port</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="flask-routes">
+<span id="flask-introduction-flask-routes"></span><h2>Flask Routes<a class="headerlink" href="#flask-routes" title="Permalink to this headline">¶</a></h2>
+<p>In Flask, the <code class="docutils literal"><span class="pre">route()</span></code> decorator is used to bind URL(s) to a function.  Every time you access the route
+in your browser, the corresponding function is called.  The name of the function does not need to match
+the route.</p>
+<p>Here is a basic example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello World!&#39;</span>
+</pre></div>
+</div>
+<p>In the example above, <code class="docutils literal"><span class="pre">app</span></code> in <code class="docutils literal"><span class="pre">&#64;app.route('/')</span></code> corresponds to the name of the variable you assign
+to the instance of the Flask class.  All routes should start with <code class="docutils literal"><span class="pre">/</span></code> which is the root.</p>
+<p>Here is a more complex example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello World!&#39;</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/food/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">mochi</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;I am very hungry!&#39;</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/favorites/programming/languages/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">language</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Python&#39;</span>
+</pre></div>
+</div>
+<p>Note that not all pages in your routes needs to be defined.  In the example above, the <code class="docutils literal"><span class="pre">favorites</span></code> page
+and the <code class="docutils literal"><span class="pre">programming</span></code> page were never defined but you can still access the <code class="docutils literal"><span class="pre">languages</span></code> page.</p>
+<p>When writing your Flask app, it would be helpful to know the url that a function is bound to.  To build
+the url when given the function name, use the following format:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">url_for</span>
+
+<span class="c1"># The name of the function should be inside quotes</span>
+<span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;function_name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="flask-templates">
+<span id="flask-introduction-flask-templates"></span><h2>Flask Templates<a class="headerlink" href="#flask-templates" title="Permalink to this headline">¶</a></h2>
+<p>In IntroCS2, the way you would render HTML is by printing HTML source code.  Why is this bad?</p>
+<blockquote>
+<div><ul class="simple">
+<li>Does not allow for modular design; it is hard to reuse code</li>
+<li>Squeeze all your HTML and Python together, creating a mess</li>
+</ul>
+</div></blockquote>
+<p>So, how can Flask templates fix this?</p>
+<blockquote>
+<div><ul class="simple">
+<li>Reuse your HTML code with inheritance</li>
+<li>Separates the HTML and Python code into HTML files and Python files (usually)</li>
+<li>Allows you to store Python variables and run Python functions directly in your HTML file</li>
+</ul>
+</div></blockquote>
+<p>Sounds too good to be true?  Try it out!  Here is some sample HTML code to be placed into your templates
+folder.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Most of your HTML files will be located in the templates folder.</p>
+</div>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- Use &lt;strong instead of &lt;b&gt; and &lt;em&gt; instead of &lt;i&gt; (HTML5 standard) --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>This is the best web page ever!!<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>In your Flask app, revise the function definition for home:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Replace the import statement at the top with the following:</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="c1"># The &#39;/&#39; denotes root and is the page loaded by default</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="c1"># Return your html template instead of the previous &#39;Hello World!&#39;</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;&lt;name of html file&gt;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Run your Flask app.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">Make sure that your virtualenv is activated when running the Flask app!</p>
+</div>
+<p>Great!  Leave your Flask app running and now let us add some excitement by throwing some Python in
+there...</p>
+<div class="highlight-html+jinja"><div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="c">{# This is a comment #}</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello World!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+        <span class="c">{# Python if statements can be used if you wrapped them with {% %} #}</span>
+        <span class="c">{# No colon is necessary #}</span>
+        <span class="cp">{%</span> <span class="k">if</span> <span class="m">1</span> <span class="o">==</span> <span class="m">1</span> <span class="cp">%}</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;&lt;</span><span class="nt">em</span><span class="p">&gt;</span>This is the best web page ever!<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+        <span class="c">{# You can also use elif statements #}</span>
+        <span class="cp">{%</span> <span class="k">elif</span> <span class="m">1</span> <span class="o">==</span> <span class="m">0</span> <span class="cp">%}</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is the worst web page ever<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+        <span class="c">{# And else statements as well... #}</span>
+        <span class="cp">{%</span> <span class="k">else</span> <span class="cp">%}</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is an OK web page...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+        <span class="c">{# Make sure to close your conditionals with this one line #}</span>
+        <span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+
+        <span class="c">{# You can use Python for loops! #}</span>
+        <span class="cp">{%</span> <span class="k">for</span> <span class="nv">i</span> <span class="k">in</span> <span class="nv">range</span><span class="o">(</span><span class="m">100</span><span class="o">)</span> <span class="cp">%}</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>I am the coolest person ever!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+        <span class="c">{# You can access the variables by surrounding the expression or variable with {{ }} #}</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> <span class="cp">{{</span> <span class="nv">i</span> <span class="o">**</span> <span class="m">2</span> <span class="cp">}}</span> <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+        <span class="c">{# Close for loops with the following line #}</span>
+        <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+
+        <span class="c">{# Do you think you can use while loops?  What would it look like? #}</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Simply refresh the page to see the changes.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The Python subset in HTML templates is really limited since we do not really want to combine the two in
+one file.  The main goal is to ease repetitive tasks such as creating a large table.</p>
+</div>
+</div>
+<div class="section" id="flask-advance-routes">
+<span id="flask-introduction-flask-advance-routes"></span><h2>Flask Advance Routes<a class="headerlink" href="#flask-advance-routes" title="Permalink to this headline">¶</a></h2>
+<p>Next, you will be introduced to more complex routes.  It is possible to utilize portions of the route as
+parameters for the function it is bound to.  Here is a basic example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/home/&lt;page&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="n">page</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In the example above, the <code class="docutils literal"><span class="pre">home()</span></code> function is taking a parameter, <code class="docutils literal"><span class="pre">page</span></code>.  To declare that a portion
+of the route is a variable, enclose it with &lt; and &gt;.  The content must match the name of the parameter.</p>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">When you declare a variable in the in the route, you need to declare that variable as a parameter in
+the function definition and vice versa.  The only exception is when you declare that parameter with a
+default value.</p>
+</div>
+<p>Let us look at a more complex example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/home/&#39;</span><span class="p">)</span>
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/home/&lt;path:filename&gt;&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;index.html&#39;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">send_static_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>There are a couple of new concepts here.  First, it is perfectly legal to bind one function to multiple
+routes.  The syntax for doing so is shown in the example above.</p>
+<p>The order you declared the routes does not matter.  Instead routing is done by certain rules prescribed by
+werkzeug.  These rules are:</p>
+<ol class="arabic simple">
+<li>Routes without variables are chosen before routes with variables</li>
+<li>Shorter routes are preferred over longer routes</li>
+</ol>
+<p>In the example above, should the user navigate to the first route, <code class="docutils literal"><span class="pre">filename</span></code> is not specified and so
+the parameter would take on the default value.</p>
+<p>Another new concept is <code class="docutils literal"><span class="pre">&lt;path:filename&gt;</span></code>.  This special format tells Flask to treat the rest of the url
+as a path; this would usually be the path for a file.  Otherwise, Flask would split the url into multiple
+pieces instead of treating it as one value.</p>
+<p>Lastly, the <code class="docutils literal"><span class="pre">send_static_file</span></code> instance method of the Flask class (<code class="docutils literal"><span class="pre">app</span></code>) is new to you.  This method
+allows you to send static files from the static folder to the browser.  This means that <code class="docutils literal"><span class="pre">filename</span></code> in
+the example above should be found in the static folder.</p>
+<p>Another thing to note is the usage of <code class="docutils literal"><span class="pre">send_static_file</span></code> in files utilizing <code class="docutils literal"><span class="pre">Blueprint</span></code>.  In those
+files, you would use the following format instead:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">current_app</span>
+
+<span class="n">current_app</span><span class="o">.</span><span class="n">send_static_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">current_app</span></code> variable in the <code class="docutils literal"><span class="pre">flask</span></code> module refers to the instance of the <code class="docutils literal"><span class="pre">Flask</span></code> class in the
+currently running Flask app.</p>
+</div>
+<div class="section" id="flask-blueprints">
+<span id="flask-introduction-flask-blueprints"></span><h2>Flask Blueprints<a class="headerlink" href="#flask-blueprints" title="Permalink to this headline">¶</a></h2>
+<p>In Software Development, you will generally see all the routes in one file, but this reduces modularity.
+To avoid this issue, we will use blueprints.</p>
+<p>Here is a basic blueprint example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># You need to import Blueprint from the flask module</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="c1"># Bind an instance of the Blueprint class to private_views</span>
+<span class="n">private_views</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">&#39;private_views&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@private_views.route</span><span class="p">(</span><span class="s1">&#39;/private/resources&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">show_resources</span><span class="p">():</span>
+    <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Make sure to import the <code class="docutils literal"><span class="pre">Blueprint</span></code> class from the <code class="docutils literal"><span class="pre">flask</span></code> module.</p>
+<p>After your import statements, you would need to declare an instance of the <code class="docutils literal"><span class="pre">Blueprint</span></code> class and bind it
+to a variable.  The <code class="docutils literal"><span class="pre">Blueprint</span></code> class takes two parameters: the name of the blueprint and the
+<code class="docutils literal"><span class="pre">import_name</span></code>.  The <code class="docutils literal"><span class="pre">import_name</span></code> would just be <code class="docutils literal"><span class="pre">__name__</span></code>.  For our work, the name of the
+<code class="docutils literal"><span class="pre">Blueprint</span></code> instance should match the first parameter.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">We are assuming that the name of the variable you bound the <code class="docutils literal"><span class="pre">Flask</span></code> instance to is <code class="docutils literal"><span class="pre">app</span></code>.</p>
+</div>
+<p>When binding a function to a route, use the name you bound the instance of <code class="docutils literal"><span class="pre">Blueprint</span></code> to instead of
+<code class="docutils literal"><span class="pre">app</span></code>.  In the example above, use <code class="docutils literal"><span class="pre">private_views</span></code> instead of <code class="docutils literal"><span class="pre">app</span></code>.  Let us look at another example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Blueprint</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">private_views</span> <span class="o">=</span> <span class="n">Blueprint</span><span class="p">(</span><span class="s1">&#39;private&#39;</span><span class="p">,</span> <span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@private_views.route</span><span class="p">(</span><span class="s1">&#39;/private/resources/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">resources</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s1">&#39;Hello World!&#39;</span>
+</pre></div>
+</div>
+<p>In this example, we would still use <code class="docutils literal"><span class="pre">private_views</span></code> instead of <code class="docutils literal"><span class="pre">app</span></code> because it is the name of the
+instance that matters, not the name of the blueprint.  So why do we care about the name of the blueprint?</p>
+<p>If we want to build an url using <code class="docutils literal"><span class="pre">url_for</span></code>, we would need to use the name of the blueprint.  <code class="docutils literal"><span class="pre">url_for</span></code>
+is a function that returns the url for a given function.  For example, to get the url for the
+<code class="docutils literal"><span class="pre">resources()</span></code> function in the example above, we would write the following snippet:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">url_for</span>
+
+<span class="c1"># The format of the parameter is blueprint_name.function_name</span>
+<span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;private.resources&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="first admonition-title">Important</p>
+<p class="last">If you are inside the main Flask app, you can simply use <code class="docutils literal"><span class="pre">url_for('function_name')</span></code>.  If you are in a
+file utilizing <code class="docutils literal"><span class="pre">Blueprint</span></code> you need <code class="docutils literal"><span class="pre">url_for('blueprint_name.function_name')</span></code>.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="advance_python.html" class="btn btn-neutral float-right" title="Advance Python" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../developer_environment/running_app.html" class="btn btn-neutral" title="Running the Flask App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, PChan, Kenneth, Shakil, Jake, Leo, WX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

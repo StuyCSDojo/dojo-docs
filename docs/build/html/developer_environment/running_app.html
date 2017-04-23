@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Running the Flask App &mdash; Dojo Documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Dojo Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="next" title="Introduction to Flask" href="../getting_started/flask_introduction.html"/>
+        <link rel="prev" title="Preparing the Developer Environment" href="preparing_environment.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dojo Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Environment</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="preparing_environment.html">Preparing the Developer Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="preparing_environment.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#install-git-and-clone-repos">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#install-python-and-configure">Install Python and Configure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#download-and-configure-mongodb">Download and Configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#installing-and-creating-virtualenv">Installing and Creating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preparing_environment.html#unix">Unix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#preparing-environment-unix-installing-git">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#install-python-and-pip">Install Python and Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#install-and-configure-mongodb">Install and configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#creating-and-activating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#preparing-environment-unix-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preparing_environment.html#school-linux">School Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#cloning-repos">Cloning Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#preparing-environment-school-linux-creating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="preparing_environment.html#preparing-environment-school-linux-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Running the Flask App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#locally">Locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#activate-the-virtualenv">Activate the Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#running-the-app">Running the App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-site">Accessing the Site</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#publicly">Publicly</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/flask_introduction.html">Introduction to Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-layout">Flask Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#basic-flask">Basic Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-routes">Flask Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-templates">Flask Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-advance-routes">Flask Advance Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/flask_introduction.html#flask-blueprints">Flask Blueprints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/advance_python.html">Advance Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#default-arguments">Default Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#string-formatting">String Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#python-decorators">Python Decorators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#components-of-decorators">Components of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#basic-decorators">Basic Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#order-of-decorators">Order of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#passing-arguments-to-decorators">Passing Arguments to Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/advance_python.html#debugging-decorators">Debugging Decorators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/advance_python.html#python-classes">Python Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html">Introduction to reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#what-is-rest">What is reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#why-use-rest">Why use reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#introduction-to-toctree">Introduction to Toctree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#editing-rest-files">Editing reST Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#basic-rest-directives">Basic reST Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#building-the-source">Building the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#fixing-the-search-bar">Fixing the Search Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/restructuredtext_introduction.html#additional-links">Additional Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/mongodb_introduction.html">Introduction to MongoDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html">Gunicorn and Nginx Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#benefits-of-nginx">Benefits of Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#server-communication">Server Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#port-filtering">Port Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#location-filtering">Location Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting_started/gunicorn_nginx_communication.html#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dojo Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Running the Flask App</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="running-the-flask-app">
+<h1>Running the Flask App<a class="headerlink" href="#running-the-flask-app" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#running-app-locally"><span class="std std-ref">Locally</span></a></li>
+<li><a class="reference internal" href="#running-app-publicly"><span class="std std-ref">Publicly</span></a></li>
+</ul>
+<div class="section" id="locally">
+<span id="running-app-locally"></span><h2>Locally<a class="headerlink" href="#locally" title="Permalink to this headline">¶</a></h2>
+<p>Unlike the Python programs in Intro CS2 , Flask apps can be run locally.  This is a great way of testing
+your changes on a local machine before integrating them on the production server.  Since our goal is to
+keep the website running without downtime, ironing out all errors before merging the changes is very
+important.  So how would you do this?</p>
+<div class="section" id="activate-the-virtualenv">
+<h3>Activate the Virtualenv<a class="headerlink" href="#activate-the-virtualenv" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Open up a terminal or command prompt and navigate into the virutalenv directory</li>
+<li>Run the activation scripts<ul>
+<li>On Windows, the command is: <code class="docutils literal"><span class="pre">Scripts\activate</span></code></li>
+<li>On Unix, the command is: <code class="docutils literal"><span class="pre">source</span> <span class="pre">bin/activate</span></code></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="running-the-app">
+<h3>Running the App<a class="headerlink" href="#running-the-app" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Navigate to the git repo for the Dojo Website in the terminal</li>
+<li>Run the app via the following command: <code class="docutils literal"><span class="pre">python</span> <span class="pre">api.py</span></code></li>
+</ul>
+</div>
+<div class="section" id="accessing-the-site">
+<h3>Accessing the Site<a class="headerlink" href="#accessing-the-site" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">While leaving the terminal/command prompt open, open up a web browser and in the address bar, enter:
+<code class="docutils literal"><span class="pre">127.0.0.1:5000</span></code></p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">As soon as you terminate the Python program, the site would stop functioning</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="publicly">
+<span id="running-app-publicly"></span><h2>Publicly<a class="headerlink" href="#publicly" title="Permalink to this headline">¶</a></h2>
+<p>There are two main issues with running the site locally:</p>
+<ol class="arabic simple">
+<li>As soon as the Python program gets terminated on your computer, the site is unavailable</li>
+<li>It can only be accessed on your local machine (ie <code class="docutils literal"><span class="pre">localhost:5000</span></code>)</li>
+</ol>
+<p>To resolve these issues, you need to run it on a web server with 24/7 uptime.</p>
+<p>You will need to use a terminal emulator on Windows (ie <a class="reference external" href="/testing/private/resources/software_installation_and_tips/installation_instructions/file_transfer_utilities/installing_ssh_programs.html#installation-file-transfer-utilities-ssh-programs-installing-git-bash">Git Bash</a>)
+or a terminal on UNIX system for these commands:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ssh &lt;username&gt;@dojo.stuycs.org
+$ cd /projects/dojo-website/app
+$ source ../../dojo/bin/activate      // Activate the virutalenv
+$ ./start_server.sh
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../getting_started/flask_introduction.html" class="btn btn-neutral float-right" title="Introduction to Flask" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="preparing_environment.html" class="btn btn-neutral" title="Preparing the Developer Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, PChan, Kenneth, Shakil, Jake, Leo, WX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

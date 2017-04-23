@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Gunicorn and Nginx Communication &mdash; Dojo Documentation 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Dojo Documentation 0.0.1 documentation" href="../index.html"/>
+        <link rel="prev" title="Introduction to MongoDB" href="mongodb_introduction.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Dojo Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Developer Environment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/preparing_environment.html">Preparing the Developer Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-git-and-clone-repos">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-configure">Install Python and Configure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#download-and-configure-mongodb">Download and Configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-and-creating-virtualenv">Installing and Creating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#unix">Unix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-git">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-pip">Install Python and Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-and-configure-mongodb">Install and configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#creating-and-activating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#school-linux">School Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#cloning-repos">Cloning Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-creating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/running_app.html">Running the Flask App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#locally">Locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#activate-the-virtualenv">Activate the Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#running-the-app">Running the App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#accessing-the-site">Accessing the Site</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#publicly">Publicly</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flask_introduction.html">Introduction to Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-layout">Flask Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#basic-flask">Basic Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-routes">Flask Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-templates">Flask Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-advance-routes">Flask Advance Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-blueprints">Flask Blueprints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advance_python.html">Advance Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#default-arguments">Default Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#string-formatting">String Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#python-decorators">Python Decorators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#components-of-decorators">Components of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#basic-decorators">Basic Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#order-of-decorators">Order of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#passing-arguments-to-decorators">Passing Arguments to Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python.html#debugging-decorators">Debugging Decorators</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python.html#python-classes">Python Classes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="restructuredtext_introduction.html">Introduction to reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#what-is-rest">What is reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#why-use-rest">Why use reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#introduction-to-toctree">Introduction to Toctree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#editing-rest-files">Editing reST Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#basic-rest-directives">Basic reST Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#building-the-source">Building the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#fixing-the-search-bar">Fixing the Search Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#additional-links">Additional Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mongodb_introduction.html">Introduction to MongoDB</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gunicorn and Nginx Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#benefits-of-nginx">Benefits of Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-communication">Server Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#port-filtering">Port Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#location-filtering">Location Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dojo Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Gunicorn and Nginx Communication</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gunicorn-and-nginx-communication">
+<h1>Gunicorn and Nginx Communication<a class="headerlink" href="#gunicorn-and-nginx-communication" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#gunicorn-nginx-communication-nginx-benefits"><span class="std std-ref">Benefits of Nginx</span></a></li>
+<li><a class="reference internal" href="#gunicorn-nginx-communication-servers-communication"><span class="std std-ref">Server Communication</span></a><ul>
+<li><a class="reference internal" href="#gunicorn-nginx-communication-port-filtering"><span class="std std-ref">Port Filtering</span></a></li>
+<li><a class="reference internal" href="#gunicorn-nginx-communication-location-filtering"><span class="std std-ref">Location Filtering</span></a></li>
+<li><a class="reference internal" href="#gunicorn-nginx-communication-nginx-as-reverse-proxy"><span class="std std-ref">Nginx as Reverse Proxy</span></a></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="benefits-of-nginx">
+<span id="gunicorn-nginx-communication-nginx-benefits"></span><h2>Benefits of Nginx<a class="headerlink" href="#benefits-of-nginx" title="Permalink to this headline">¶</a></h2>
+<p>Nginx provides many benefits over the server bundled with Flask:</p>
+<ul class="simple">
+<li>Provide the gzip module to compress data before transfer (improve performance)</li>
+<li>Directly serve static content (and do so faster)</li>
+<li>Allows easy configuration of SSL encryption</li>
+<li>Caches frequently accessed files (useful for resources section and static content)</li>
+</ul>
+</div>
+<div class="section" id="server-communication">
+<span id="gunicorn-nginx-communication-servers-communication"></span><h2>Server Communication<a class="headerlink" href="#server-communication" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="port-filtering">
+<span id="gunicorn-nginx-communication-port-filtering"></span><h3>Port Filtering<a class="headerlink" href="#port-filtering" title="Permalink to this headline">¶</a></h3>
+<p>Nginx only listens on the following ports:</p>
+<ul class="simple">
+<li><strong>Port 80</strong> (<em>default HTTP port</em>): Users who accidentally navigate to the site under HTTP would be
+permanently redirected to use HTTPS.</li>
+<li><strong>Port 443</strong> (<em>default HTTPS port</em>): Traffic using HTTPS would either be routed by Nginx to Gunicorn or
+be handled by Nginx directly.</li>
+</ul>
+</div>
+<div class="section" id="location-filtering">
+<span id="gunicorn-nginx-communication-location-filtering"></span><h3>Location Filtering<a class="headerlink" href="#location-filtering" title="Permalink to this headline">¶</a></h3>
+<p>We have defined multiple location filters in the config file (located at <code class="docutils literal"><span class="pre">/etc/nginx/sites-available</span></code>)</p>
+<ul class="simple">
+<li>Requests accessing static files using the route (<code class="docutils literal"><span class="pre">/static</span></code>) would be served by Nginx directly</li>
+<li>Requests accessing content on the public resources page (<code class="docutils literal"><span class="pre">dojo.stuycs.org/resources</span></code>) is also served
+by Nginx directly</li>
+</ul>
+<p>This is because...</p>
+<ul class="simple">
+<li>No further processing is required for access to such files</li>
+<li>Serving files directly with Nginx is faster</li>
+<li>Nginx can cache files that are frequently accessed for even faster performance</li>
+</ul>
+</div>
+<div class="section" id="nginx-as-reverse-proxy">
+<span id="gunicorn-nginx-communication-nginx-as-reverse-proxy"></span><h3>Nginx as Reverse Proxy<a class="headerlink" href="#nginx-as-reverse-proxy" title="Permalink to this headline">¶</a></h3>
+<p>Aside from the routes handled the aforementioned location filters, all other traffic are passed to
+Gunicorn, a Python HTTP server that is used instead of the server bundled in Flask for faster performance,
+via a Unix socket.  Responses from Gunicorn is sent back to the client via Nginx as a reverse proxy.</p>
+<p>Key Notes:</p>
+<ul class="simple">
+<li>Nginx reduces the workload for Gunicorn by handling static files</li>
+<li>Nginx as a reverse proxy allows responses from Gunicorn to be tunneled under HTTPS for extra security
+(SSL encryption is implemented for Nginx)</li>
+<li>Nginx as a reverse proxy accepts the client connection on Gunicorn&#8217;s behalf, freeing up Gunicorn workers
+to spend more time handling requests instead of waiting for client to respond</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="mongodb_introduction.html" class="btn btn-neutral" title="Introduction to MongoDB" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, PChan, Kenneth, Shakil, Jake, Leo, WX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.0.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: ''
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
