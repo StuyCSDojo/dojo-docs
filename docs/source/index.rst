@@ -18,7 +18,8 @@ Welcome to Dojo Website's documentation!
    :caption: Getting Started
 
    getting_started/flask_introduction
-   getting_started/advance_python
+   getting_started/advance_python_part_1
+   getting_started/advance_python_part_2
    getting_started/restructuredtext_introduction
    getting_started/mongodb_introduction
    getting_started/gunicorn_nginx_communication
@@ -30,7 +31,7 @@ Welcome to Dojo Website's documentation!
 .. toctree::
    :maxdepth: 3
    :caption: ReST Documentation
-      
+
 
 Indices and tables
 ==================
@@ -38,4 +39,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-

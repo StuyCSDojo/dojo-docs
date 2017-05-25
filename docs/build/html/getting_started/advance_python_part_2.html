@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <title>Advance Python: Part II</title>
+        
+
+        
+        
+
+        
+
+        
+        
+            
+
+        
+
+        
+        
+            <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+        
+
+        
+
+        
+
+        <link rel="stylesheet" href="../_static/bootstrap-glyphicons.css" type="text/css" />
+        <link rel="stylesheet" href="../_static/main.css" type="text/css" />
+        <link rel="stylesheet" href="../_static/button.css" type="text/css" />
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+            integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+            crossorigin="anonymous"></script>
+        <script src="../_static/button.js"></script>
+        <script src="../_static/set_target.js"></script>
+                <link rel="index" title="Index"
+                      href="../genindex.html"/>
+                <link rel="search" title="Search" href="../search.html"/>
+            <link rel="top" title="Dojo Documentation 0.0.2 documentation" href="../index.html"/>
+                <link rel="next" title="Introduction to reStructuredText" href="restructuredtext_introduction.html"/>
+                <link rel="prev" title="Advance Python: Part I" href="advance_python_part_1.html"/> 
+
+        
+        <script src="../_static/js/modernizr.min.js"></script>
+
+    </head>
+
+    <body class="wy-body-for-nav" role="document">
+
+         
+        <div class="wy-grid-for-nav">
+
+            
+            <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+                <div class="wy-side-scroll">
+                    <div class="wy-side-nav-search">
+                        
+
+                            
+                                    <a href="https://dojo.stuycs.org"class="icon icon-home"> Dojo Website
+                            
+
+                            
+                                    </a>
+
+                                    
+                                        
+                                        
+                                            <div class="version">
+                                                0.0.2
+                                            </div>
+                                        
+                                    
+
+                                    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search Dojo Resources" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+                        
+                    </div>
+
+                    <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                        
+                            
+                            
+                                <p class="caption"><span class="caption-text">Developer Environment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/preparing_environment.html">Preparing the Developer Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-git-and-clone-repos">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-configure">Install Python and Configure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#download-and-configure-mongodb">Download and Configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-and-creating-virtualenv">Installing and Creating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#unix">Unix</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-git">Install Git and Clone Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-python-and-pip">Install Python and Pip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#install-and-configure-mongodb">Install and configure MongoDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#creating-and-activating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-unix-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/preparing_environment.html#school-linux">School Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#cloning-repos">Cloning Repos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-creating-virtualenv">Creating and Activating Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/preparing_environment.html#preparing-environment-school-linux-installing-dependencies">Installing Dependencies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../developer_environment/running_app.html">Running the Flask App</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#locally">Locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#activate-the-virtualenv">Activate the Virtualenv</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#running-the-app">Running the App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../developer_environment/running_app.html#accessing-the-site">Accessing the Site</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../developer_environment/running_app.html#publicly">Publicly</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flask_introduction.html">Introduction to Flask</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-layout">Flask Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#basic-flask">Basic Flask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-routes">Flask Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-templates">Flask Templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-advance-routes">Flask Advance Routes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="flask_introduction.html#flask-blueprints">Flask Blueprints</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="advance_python_part_1.html">Advance Python: Part I</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="advance_python_part_1.html#default-arguments">Default Arguments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python_part_1.html#string-formatting">String Formatting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="advance_python_part_1.html#old-format">Old Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python_part_1.html#new-format">New Format</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python_part_1.html#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advance_python_part_1.html#python-decorators">Python Decorators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="advance_python_part_1.html#components-of-decorators">Components of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python_part_1.html#basic-decorators">Basic Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python_part_1.html#order-of-decorators">Order of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python_part_1.html#passing-arguments-to-decorators">Passing Arguments to Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="advance_python_part_1.html#debugging-decorators">Debugging Decorators</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advance Python: Part II</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python-classes">Python Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#old-style-classes-vs-new-style-classes">Old Style Classes vs New Style Classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#basics-of-writing-a-class">Basics of Writing a Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#constructing-a-class">Constructing a Class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expanding-the-basics">Expanding the Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#inheritance">Inheritance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="restructuredtext_introduction.html">Introduction to reStructuredText</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#what-is-rest">What is reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#why-use-rest">Why use reST</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#introduction-to-toctree">Introduction to Toctree</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#editing-rest-files">Editing reST Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#basic-rest-directives">Basic reST Directives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#building-the-source">Building the Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#fixing-the-search-bar">Fixing the Search Bar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#additional-links">Additional Links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mongodb_introduction.html">Introduction to MongoDB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mongodb_introduction.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongodb_introduction.html#mongod-and-mongo">Mongod and Mongo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongodb_introduction.html#basic-commands">Basic Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongodb_introduction.html#basic-database-commands">Basic Database Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mongodb_introduction.html#older-versions">Older Versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongodb_introduction.html#newer-versions">Newer Versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gunicorn_nginx_communication.html">Gunicorn and Nginx Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gunicorn_nginx_communication.html#benefits-of-nginx">Benefits of Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gunicorn_nginx_communication.html#server-communication">Server Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#port-filtering">Port Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#location-filtering">Location Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gunicorn_nginx_communication.html#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                            
+                        
+                    </div>
+                </div>
+                
+            </nav>
+
+            <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+                
+                <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                    
+                        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                        <a href="../index.html">Dojo Documentation</a>
+                    
+                </nav>
+
+
+
+                
+                <div class="wy-nav-content">
+                    <div class="rst-content">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+	<li><a href="../index.html">Documentation</a> &raquo;</li>
+	
+      <li>Advance Python: Part II</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+	
+	    
+	
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+                        <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+                            <div itemprop="articleBody">
+                                
+  <div class="section" id="advance-python-part-ii">
+<h1>Advance Python: Part II<a class="headerlink" href="#advance-python-part-ii" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="#advance-python-python-classes"><span class="std std-ref">Python Classes</span></a><ul>
+<li><a class="reference internal" href="#advance-python-old-style-vs-new-style"><span class="std std-ref">Old Style Classes vs New Style Classes</span></a></li>
+<li><a class="reference internal" href="#advance-python-basics-of-writing-a-class"><span class="std std-ref">Basics of Writing a Class</span></a></li>
+<li><a class="reference internal" href="#advance-python-constructing-a-class"><span class="std std-ref">Constructing a Class</span></a></li>
+<li><a class="reference internal" href="#advance-python-expanding-the-basics"><span class="std std-ref">Expanding the Basics</span></a></li>
+<li><a class="reference internal" href="#advance-python-inheritance"><span class="std std-ref">Inheritance</span></a></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="python-classes">
+<span id="advance-python-python-classes"></span><h2>Python Classes<a class="headerlink" href="#python-classes" title="Permalink to this headline">¶</a></h2>
+<p>The syntax for writing Python classes are awkward, but Python is still an object oriented language. Take a
+look at Python list:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">a</span>
+<span class="go">[3]</span>
+</pre></div>
+</div>
+<p>Python lists are one example of a Python object</p>
+<ul class="simple">
+<li>The first line instantiates an instance of <code class="docutils literal"><span class="pre">list</span></code> and binds it to <code class="docutils literal"><span class="pre">a</span></code></li>
+<li>In the second line, we call the <code class="docutils literal"><span class="pre">append()</span></code> method of the <code class="docutils literal"><span class="pre">list</span></code> class</li>
+</ul>
+<div class="section" id="old-style-classes-vs-new-style-classes">
+<span id="advance-python-old-style-vs-new-style"></span><h3>Old Style Classes vs New Style Classes<a class="headerlink" href="#old-style-classes-vs-new-style-classes" title="Permalink to this headline">¶</a></h3>
+<p>When writing classes in Python 2, you should be aware of the differences between the old style and the new
+style.</p>
+<p>Old style classes have one of the following class headers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>class &lt;ClassName&gt;:
+# or
+class &lt;ClassName&gt;():
+# or
+class &lt;ClassName&gt;(OldStyleClass)
+</pre></div>
+</div>
+<p>The last class header would be covered in more details in the inheritance section, but simply means that
+the class is extending a class of the old style.</p>
+<p>New style classes have one of the following class headers:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>class &lt;ClassName&gt;(object):
+# or
+class &lt;ClassName&gt;(NewStyleClass):
+</pre></div>
+</div>
+<p>As before, the last class header will be covered in more details in the inheritance section.  It simply
+denotes that the class is extending another class of the new style.</p>
+<p>You should generally avoid writing classes in the old style unless mandated.  The new style comes with a
+few new features including the usage of <code class="docutils literal"><span class="pre">super()</span></code>, extending builtin types, and more.</p>
+</div>
+<div class="section" id="basics-of-writing-a-class">
+<span id="advance-python-basics-of-writing-a-class"></span><h3>Basics of Writing a Class<a class="headerlink" href="#basics-of-writing-a-class" title="Permalink to this headline">¶</a></h3>
+<p>Here is the syntax of a basic class:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>class &lt;ClassName&gt;(object):
+
+    def &lt;method_name&gt;(self, arg1, arg2, ...):
+        # do stuff
+</pre></div>
+</div>
+<p>Here is an example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Hello</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">say_hello</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span> <span class="s1">&#39;Hello&#39;</span>
+</pre></div>
+</div>
+<p>How would you use it?</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">Hello</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">say_hello</span><span class="p">()</span>
+<span class="go">Hello</span>
+</pre></div>
+</div>
+<p>Key Notes:</p>
+<ul>
+<li><p class="first">Declare a class with the <code class="docutils literal"><span class="pre">class</span></code> keyword</p>
+<ul class="simple">
+<li>Convention is to use CamelCase for the name of a class</li>
+</ul>
+</li>
+<li><p class="first">Each non-static method has to take <code class="docutils literal"><span class="pre">self</span></code> as the first argument</p>
+</li>
+<li><p class="first">Instantiating a class is similar to making a function call</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">variable_name</span> <span class="o">=</span> <span class="n">ClassName</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Methods of a class are accessed through the dot operator</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ClassName</span><span class="o">.</span><span class="n">method_name</span><span class="p">()</span>
+<span class="c1"># or</span>
+<span class="n">variable_name</span> <span class="o">=</span> <span class="n">ClassName</span><span class="p">()</span>
+<span class="n">variable_name</span><span class="o">.</span><span class="n">method_name</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="constructing-a-class">
+<span id="advance-python-constructing-a-class"></span><h3>Constructing a Class<a class="headerlink" href="#constructing-a-class" title="Permalink to this headline">¶</a></h3>
+<p>Like Java, Python provides a default constructor for classes where one was not explicitly defined.  Here
+is a class with an explicitly defined constructor:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;You deposited some cash!&#39;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">__init__()</span></code> method is the constructor.  In this case, it is the same as the default constructor
+which does nothing.  Here is a more useful constructor:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span> <span class="n">money</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">money</span> <span class="o">+=</span> <span class="n">amount</span>
+</pre></div>
+</div>
+<p>When we test it out...</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bank_account</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bank_account</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">bank_account</span><span class="o">.</span><span class="n">money</span>
+<span class="go">450</span>
+</pre></div>
+</div>
+<p>Key Notes:</p>
+<ul class="simple">
+<li>Python uses the special keyword, <code class="docutils literal"><span class="pre">__init__</span></code>, to denote the constructor of a class<ul>
+<li>Like usual, you need to specify <code class="docutils literal"><span class="pre">self</span></code> as the first argument of the constructor</li>
+</ul>
+</li>
+<li>Instance variables are prefixed with <code class="docutils literal"><span class="pre">self.</span></code> (note the dot)<ul>
+<li>They are global to the entire class</li>
+<li>Each instance of the class has its own copies of instance variables</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="expanding-the-basics">
+<span id="advance-python-expanding-the-basics"></span><h3>Expanding the Basics<a class="headerlink" href="#expanding-the-basics" title="Permalink to this headline">¶</a></h3>
+<p>Before we move on to a different topic, we will tie up some loose ends:</p>
+<ul>
+<li><p class="first">Modifying instance variables directly</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">b</span><span class="o">.</span><span class="n">money</span>
+<span class="go">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">money</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">b</span><span class="o">.</span><span class="n">money</span>
+<span class="go">500</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Key Things to Note:<ul>
+<li>Python does not have the concept of private or protected variables</li>
+<li>Python prefers simplicity over the possibility that the user might do something stupid</li>
+<li>Python does support basic name mangling, but it is more of a deterrence<ul>
+<li>Ways to control how the user might alter instance variables are beyond the scope of this guide</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">Who am I?</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">money</span> <span class="o">+=</span> <span class="n">amount</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Key Things to Note:<ul>
+<li>In Java, you refer to the current instance of the class with the <code class="docutils literal"><span class="pre">this</span></code> keyword</li>
+<li>Python uses the <code class="docutils literal"><span class="pre">self</span></code> keyword</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="first">Static methods</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">money</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">():</span>
+        <span class="nb">print</span> <span class="s1">&#39;BankAccount&#39;</span>
+</pre></div>
+</div>
+<p>A static method is declared by utilizing the <code class="docutils literal"><span class="pre">staticmethod</span></code> decorator.  It can be called without
+creating an instance:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">BankAccount</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+<span class="go">BankAccount</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">BankAccount</span><span class="p">()</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+<span class="go">BankAccount</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Static variables/Class variables</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="n">money</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="k">def</span> <span class="nf">deposit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">amount</span><span class="p">):</span>
+        <span class="n">money</span> <span class="o">+=</span> <span class="n">amount</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">Key Things to Note:</p>
+<ul class="simple">
+<li>Declared without the <code class="docutils literal"><span class="pre">self.</span></code> prefix</li>
+<li>Can be accessed without declaring an instance of the class</li>
+<li>Modifying the class copy, but not the instance copy will cause the instance copy to change as well
+(as expected)</li>
+<li>Not truly static, each instance of the class has its own copy<ul>
+<li>If you change the instance&#8217;s copy, it will no longer sync up with the class copy</li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">BankAccount</span><span class="o">.</span><span class="n">money</span>
+<span class="go">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">b</span><span class="o">.</span><span class="n">money</span>          <span class="c1"># should be the same as BankAccount.money</span>
+<span class="go">50</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">BankAccount</span><span class="o">.</span><span class="n">deposit</span><span class="p">(</span><span class="mi">400</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">BankAccount</span><span class="o">.</span><span class="n">money</span>
+<span class="go">450</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">b</span><span class="o">.</span><span class="n">money</span>
+<span class="go">450</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span><span class="o">.</span><span class="n">money</span> <span class="o">=</span> <span class="mi">400</span>          <span class="c1"># will not modify the class copy</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">b</span><span class="o">.</span><span class="n">money</span>
+<span class="go">400</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">BankAccount</span><span class="o">.</span><span class="n">money</span>
+<span class="go">450</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">&#8220;toString()&#8221; method</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">BankAccount</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">money</span> <span class="o">=</span> <span class="mi">50</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;BankAcccount Representation Form&#39;</span>
+
+    <span class="k">def</span> <span class="nf">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;BankAccount String Form&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">bank_account</span> <span class="o">=</span> <span class="n">BankAccount</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bank_account</span>
+<span class="go">BankAccount Representation Form</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="n">bank_account</span>
+<span class="go">BankAccount String Form</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="p">[</span><span class="n">BankAccount</span><span class="p">(),</span> <span class="n">BankAccount</span><span class="p">()]</span>
+<span class="go">[&#39;BankAccount Representation Form&#39;, &#39;BankAccount Representation Form&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="p">[</span><span class="n">BankAccount</span><span class="p">(),</span> <span class="n">BankAccount</span><span class="p">()]</span>
+<span class="go">[&#39;BankAccount Representation Form&#39;, &#39;BankAccount Representation Form&#39;]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>Key Things to Note:<ul>
+<li>Generally <code class="docutils literal"><span class="pre">__repr__</span></code> should be defined as a string representation of the object<ul>
+<li>This means <code class="docutils literal"><span class="pre">eval(repr(object))</span> <span class="pre">==</span> <span class="pre">object</span> <span class="pre">==</span> <span class="pre">True</span></code></li>
+</ul>
+</li>
+<li><code class="docutils literal"><span class="pre">__str__</span></code> is a user-friendly form of <code class="docutils literal"><span class="pre">__repr__</span></code> and therefore does not have the same
+constraints<ul>
+<li>Default implementation simply contains the id (memory address) and object name</li>
+</ul>
+</li>
+<li>If <code class="docutils literal"><span class="pre">__str__</span></code> is not found, <code class="docutils literal"><span class="pre">__repr__</span></code> is used</li>
+<li><code class="docutils literal"><span class="pre">__repr__</span></code> is used when printing a container of objects</li>
+<li><code class="docutils literal"><span class="pre">__repr__</span></code> corresponds to <code class="docutils literal"><span class="pre">repr()</span></code> and <code class="docutils literal"><span class="pre">__str__</span></code> corresponds to <code class="docutils literal"><span class="pre">str()</span></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="inheritance">
+<span id="advance-python-inheritance"></span><h3>Inheritance<a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have covered the basics, the next step is inheritance...</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DerivedClassName</span><span class="p">(</span><span class="n">BaseClassName</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Simply pass the parent class as an argument to the derived class (in the class header).  For example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;idk&#39;</span>
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+
+    <span class="k">pass</span>
+</pre></div>
+</div>
+<p>Let&#8217;s see what we can do with this:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;tom&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">name</span>
+<span class="go">tom</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+<span class="go">idk</span>
+</pre></div>
+</div>
+<p>Here the <code class="docutils literal"><span class="pre">Dog</span></code> class is inheriting both the constructor (<code class="docutils literal"><span class="pre">__init__</span></code>) and the <code class="docutils literal"><span class="pre">speak()</span></code> method from
+<code class="docutils literal"><span class="pre">Animal</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Unlike Java, Python supports multiple base classes.  Simply list them after the first base class and
+separate them with commas.  Use multiple inheritance at your own risk.</p>
+</div>
+<p>The next step is learning how to override methods:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;idk&#39;</span>
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Woof!&#39;</span>
+</pre></div>
+</div>
+<p>And the result is...</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">animal</span> <span class="o">=</span> <span class="n">Animal</span><span class="p">(</span><span class="s1">&#39;animal&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">animal</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+<span class="go">idk</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dog</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;dog&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dog</span><span class="o">.</span><span class="n">name</span>
+<span class="go">dog</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dog</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+<span class="go">Woof!</span>
+</pre></div>
+</div>
+<p>Notice how <code class="docutils literal"><span class="pre">dog</span></code> says &#8220;Woof!&#8221; while <code class="docutils literal"><span class="pre">animal</span></code> says &#8220;idk&#8221;.</p>
+<p>The logical step after learning how to override methods is to learn how to access the overridden method.
+If you are writing a class in the new style, you have access to the <code class="docutils literal"><span class="pre">super()</span></code> function.  Much like Java,
+<code class="docutils literal"><span class="pre">super()</span></code> refers to the parent class or the superclass.  However, the syntax is slightly different:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">super</span><span class="p">(</span><span class="n">SubClass</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">method_name</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Here is an example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;idk&#39;</span>
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="c1"># In Python2, super() takes two arguments: name of subclass</span>
+        <span class="c1"># and the current instance</span>
+        <span class="nb">print</span> <span class="nb">super</span><span class="p">(</span><span class="n">Dog</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">speak</span><span class="p">()</span>
+        <span class="k">return</span> <span class="s1">&#39;Woof!&#39;</span>
+</pre></div>
+</div>
+<p>While <em>overriding</em> is simple in Python, <strong>overloading</strong> is a lot more complicated.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;??&#39;</span>
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;Yummy!&#39;</span>
+
+    <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">food_name</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">food_name</span> <span class="o">==</span> <span class="s1">&#39;dogfood&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Yummy!&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Disgusting!&#39;</span>
+</pre></div>
+</div>
+<p>Testing it out, we get...</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;tom&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">eat</span><span class="p">(</span><span class="s1">&#39;dogfood&#39;</span><span class="p">)</span>
+<span class="go">Yummy!</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">eat</span><span class="p">()</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;stdin&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n">&lt;module&gt;</span>
+<span class="gr">TypeError</span>: <span class="n">eat() takes exactly 2 arguments (1 given)</span>
+</pre></div>
+</div>
+<p>Key Notes:</p>
+<ul class="simple">
+<li>Override a method by implementing the same method in the child class (only the function name matters)</li>
+<li>If you try overloading a method, the last overloaded method implemented would override the ones you try
+to overload</li>
+</ul>
+<p>We can sort of get around this with either default arguments or argument packing/unpacking:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Animal</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;??&#39;</span>
+
+<span class="k">class</span> <span class="nc">Dog</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">eat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dogfood</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">dogfood</span> <span class="ow">or</span> <span class="n">dogfood</span> <span class="o">==</span> <span class="s1">&#39;dogfood&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Yummy!&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Disgusting!&#39;</span>
+
+    <span class="k">def</span> <span class="nf">eat2</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="ow">or</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;dogfood&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Yummy!&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;Disgusting!&#39;</span>
+</pre></div>
+</div>
+<p>When we test it...</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">(</span><span class="s1">&#39;tom&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">eat</span><span class="p">(</span><span class="s1">&#39;dogfood&#39;</span><span class="p">)</span>
+<span class="go">Yummy!</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">eat</span><span class="p">()</span>
+<span class="go">Yummy!</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">eat</span><span class="p">(</span><span class="s1">&#39;halal&#39;</span><span class="p">)</span>
+<span class="go">Disgusting!</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">eat2</span><span class="p">()</span>
+<span class="go">Yummy!</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tom</span><span class="o">.</span><span class="n">eat2</span><span class="p">(</span><span class="s1">&#39;catfood&#39;</span><span class="p">)</span>
+<span class="go">Disgusting!</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Implementation of overloaded methods using either of these workarounds are messy and should be avoided
+when possible.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+                            </div>
+                            <div class="articleComments">
+                                
+                            </div>
+                        </div>
+                        <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="restructuredtext_introduction.html" class="btn btn-neutral float-right" title="Introduction to reStructuredText" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="advance_python_part_1.html" class="btn btn-neutral" title="Advance Python: Part I" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, PChan, Kenneth, Shakil, Jake, Leo, WX.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+                    </div>
+                </div>
+                
+            </section>
+            
+        </div>
+	
+	<div class="rst-versions" data-toggle="rst-versions">
+	    <form action="/logout" id="button_form">
+            </form>
+	</div>
+        
+
+
+        
+
+            <script type="text/javascript">
+             var DOCUMENTATION_OPTIONS = {
+                 URL_ROOT:'../',
+                 VERSION:'0.0.2',
+                 COLLAPSE_INDEX:false,
+                 FILE_SUFFIX:'.html',
+                 HAS_SOURCE:  true,
+                 SOURCELINK_SUFFIX: ''
+             };
+            </script>
+                <script type="text/javascript" src="../_static/jquery.js"></script>
+                <script type="text/javascript" src="../_static/underscore.js"></script>
+                <script type="text/javascript" src="../_static/doctools.js"></script>
+
+        
+
+        
+        
+            <script type="text/javascript" src="../_static/js/theme.js"></script>
+        
+
+        
+        
+            <script type="text/javascript">
+             jQuery(function () {
+                 SphinxRtdTheme.StickyNav.enable();
+             });
+            </script>
+         
+
+    </body>
+</html>

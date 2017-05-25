@@ -22,7 +22,7 @@ Preparing the Developer Environment
   * :ref:`preparing_environment_school_linux_installing_dependencies`
 
 .. highlight:: none
-    
+
 .. _preparing_environment_windows:
 
 Windows
@@ -31,17 +31,17 @@ Windows
    ``C:\Users\Username>`` signals that you should enter the commands afterward in the command prompt.
 
 .. _preparing_environment_windows_installing_git:
-   
+
 Install Git and Clone Repos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If you do not have Git installed, check the
-  `Installing Git </testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_git.html#installation-programming-tools-git-windows>`_ guide for instructions
+  `Installing Git </testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_git.html#windows>`_ guide for instructions
 * For a brief introduction to Git, check the
   `Introduction to Git </testing/private/resources/software_installation_and_tips/software_tutorials/programming_tools/git_tutorial.html>`_ guide
 * It is also recommended to set up SSH keys, information can be found in the
   `SSH Keys </testing/private/resources/software_installation_and_tips/software_tutorials/remote_file_transfer/ssh_keys_tutorial.html>`_ guide
 * Create a folder for the project and clone the Dojo Website repos inside that directory by running the
-  following commands in powershell or command prompt:
+  following commands in Powershell or command prompt:
   ::
 
      C:\Users\Username> mkdir <name of directory>
@@ -51,11 +51,11 @@ Install Git and Clone Repos
      C:\Users\Username> git clone git@github.com:StuyCSDojo/dojo-resources.git
 
 .. _preparing_environment_windows_installing_python:
-     
+
 Install Python and Configure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If you do not have Python installed or your version is not at least 2.7.9, follow the instructions
-  `here <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html#installation-programming-languages-python-pip-windows>`_ (uninstall the old version if necessary)
+  `here <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html#windows>`_ (uninstall the old version if necessary)
 * At this point, if you are still using a previous installation, make sure that Python and Pip are on your
   path.  To check, run the following commands:
   ::
@@ -70,12 +70,11 @@ Install Python and Configure
      Not sure how to add a directory to your path?  Read the `Modifying Windows Path guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/software_tutorials/system/modifying_windows_path_tutorial.html>`_.
 
 .. _preparing_environment_windows_installing_mongodb:
-   
+
 Download and Configure MongoDB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-MongoDB is the database that we are using to store user credentials along with the announcements on the
-homepage that is taught during second semester of Software Development.  Check the `Installing MongoDB
-<https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html#windows>`_ guide for instructions on installing it.
+MongoDB is one of the databases that you will learn in Software Development.  We are using it to store
+user credentials along with the announcements on the homepage.  Check the `Installing MongoDB for Windows guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html#windows>`_ for instructions to installing it.
 
 .. _preparing_environment_windows_installing_virtualenv:
 
@@ -87,7 +86,7 @@ The virtualenv module:
 * Allows you to test for compatibility with newer libraries without breaking current products
 
 If you installed Anaconda Python, you can skip the installation step.  Otherwise, run the following
-command in the command prompt or powershell:
+command in the command prompt or Powershell:
 ::
 
    C:\Users\Username> pip install virtualenv
@@ -122,8 +121,8 @@ Otherwise...
      C:\Users\Username> pip install -r ..\dojo-website\app\requirements.txt
 
 .. note::
-   The requirements.txt file contains a list of dependencies in a format readable by Pip and humans.  
-   
+   The requirements.txt file contains a list of dependencies in a format readable by Pip and humans.
+
 .. _preparing_environment_unix:
 
 Unix
@@ -150,15 +149,14 @@ Install Git and Clone Repos
 Install Python and Pip
 ^^^^^^^^^^^^^^^^^^^^^^
 Pip is the Python package manager that we would be using to install extra Python libraries.  For
-instructions on installing Pip and/or Python, check the `Installing Python and Pip guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html#linux>`_.
+instructions on installing Pip and/or Python, check the `Installing Python and Pip guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html>`_.
 
 .. _preparing_environment_unix_installing_mongodb:
 
 Install and configure MongoDB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-MongoDB is the database that we are using to store user credentials along with the announcements on the
-homepage that is taught during second semester of Software Development.  Check the `Installing MongoDB
-guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html#windows>`_ for instructions to installing it.
+MongoDB is one of the databases that you will learn in Software Development.  We are using it to store
+user credentials along with the announcements on the homepage.  Check the `Installing MongoDB  guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html>`_ for instructions to installing it.
 
 .. _preparing_environment_unix_installing_virtualenv:
 
@@ -203,7 +201,7 @@ Installing Dependencies
 
 .. note::
    The requirements.txt file contains a list of dependencies in a format readable by Pip and humans.
-  
+
 .. _preparing_environment_school_linux:
 
 School Linux
@@ -215,15 +213,15 @@ installation of Linux.  Most tools are already installed and the rest can be ins
 
 Cloning Repos
 ^^^^^^^^^^^^^
-On the school machines, Git is already installed so we would start by cloning the repositories we need.
-Start by creating a directory to store all your Dojo Website work.  Inside that directory, you will need
-to run the following commands:
+On the school machines, Git is already installed so we just need to clone the repositories.  Start by
+creating a directory to store all your Dojo Website work.  Inside that directory, you will need to run
+the following commands:
 ::
 
    $ git clone git@github.com:StuyCSDojo/dojo-docs.git
    $ git clone git@github.com:StuyCSDojo/dojo-resources.git
    $ git clone git@github.com:StuyCSDojo/dojo-website.git
-   
+
 .. note::
    If you need help regarding Git, check out the `Introduction to Git </testing/private/resources/software_installation_and_tips/software_tutorials/programming_tools/git_tutorial.html>`_ guide.  To set up the SSH
    keys, check out `SSH Keys </testing/private/resources/software_installation_and_tips/software_tutorials/remote_file_transfer/ssh_keys_tutorial.html>`_ guide.
@@ -266,5 +264,5 @@ Installing Dependencies
 
 .. note::
    The requirements.txt file contains a list of dependencies in a format readable by Pip and humans.
-   
+
 .. highlight:: python

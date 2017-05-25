@@ -15,12 +15,12 @@ Introduction to reStructuredText
 * :ref:`restructuredtext_introduction_additional_links`
 
 .. highlight:: none
-  
+
 .. _restructuredtext_introduction_what_is_rst:
 
 What is reST
 ------------
-**reStructuredText** (reST) is a readable, unobtrusive, and powerful markup syntax commonly use to build
+**reStructuredText** (reST) is a readable, unobtrusive, and powerful markup syntax commonly uses to build
 in-line program documentation or simple web pages.  **Sphinx** is a tool that parses and converts
 reStructuredText source files into various formats such as HTML, LaTex, and manual pages.
 
@@ -38,7 +38,7 @@ There are many advantages to using reST:
 
   * Features extra utilities such as admonition (note, caution, danger, tip, important, and etc)
   * Allows the inclusion of footnotes very easily
-  * Easy syntax highlighting for codeblocks
+  * Easy syntax highlighting for code blocks
   * And more...
 * Consistent with the format produced by sphinx-apidoc which extracts documentation from Python docstring
   and writes it in reST format
@@ -77,7 +77,7 @@ title of the file would be rendered in place of the filename.
 
 Editing reST Files
 ------------------
-The reST source files are located in the source directory at the root of the project folders.  Currently
+The reST source files are located in the source directory at the root of the project folders.  Currently,
 the path to the project folders are as followed:
 ::
 
@@ -97,12 +97,12 @@ the path to the project folders are as followed:
 
 When you first start out...
 
-* Focus about the textual portion and forget about the styling
+* Focus on the textual portion and forget about the styling
 * Come up with headings and subheadings that summarize each sections/subsections
 * Mentally mark or physically note the places where a code block would be appropriate
 * After planning out the design, proceed to the next section for a quick run through of common reST
   directives.
-  
+
 .. _restructuredtext_introduction_basic_rst_directives:
 
 Basic reST Directives
@@ -117,7 +117,7 @@ Here you will find a list of the more commonly used reST directives [#f2]_.  Che
 
   .. important::
      The punctuation character must span at least as long as the header text.
-     
+
   * Use the following conventions for creating section headers:
 
     * For the main header, underline the header text with the "=" character
@@ -160,7 +160,7 @@ Here you will find a list of the more commonly used reST directives [#f2]_.  Che
   ::
 
      .. <admonition type>::
-        The text that you want to render with the admonitions.
+	The text that you want to render with the admonitions.
 
   The following admonition types are available: attention, caution, danger, error, hint, important, note,
   tip, and warning.
@@ -170,7 +170,7 @@ Here you will find a list of the more commonly used reST directives [#f2]_.  Che
 
 * **Links**
   |br|
-  There are two form of links:
+  There are two forms of links:
 
   * External Links:
 
@@ -185,7 +185,7 @@ Here you will find a list of the more commonly used reST directives [#f2]_.  Che
   * Internal Links:
     |br|
     Internal links have two components
-    
+
     * One to describe the destination utilizing the following syntax: ``.. _<insert label>:``
     * One to describe the link to the destination utilizing the following syntax: ``:ref:`<insert label>```
 
@@ -231,14 +231,14 @@ Here you will find a list of the more commonly used reST directives [#f2]_.  Che
      .. |br| raw:: html
 
 	<br />
-     
+
      Introduction to reST
      ====================
 
   When you need to use the custom directive defined above, simply use ``|br|``.
 
 .. rubric:: Footnotes
-  
+
 .. [#f2] A few examples were taken from `the reST primer <http://www.sphinx-doc.org/en/stable/rest.html>`_.
 
 .. _restructuredtext_introduction_building_the_source:
@@ -257,8 +257,8 @@ Building the Source
 
      $ make html
 
-* If the command "make" is not found, follow the `Installing Make </testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_make.html>`_ guide to install it. 
-    
+* If the command "make" is not found, follow the `Installing Make </testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_make.html>`_ guide to install it.
+
   Once you are able to run ``make.bat html`` or ``make html``, check to make sure that the build did not
   resulted in any warnings.  These typically appear near the middle of the output.  Aim to fix all
   warnings if possible.  Typical warnings include, but are not limited to:
@@ -298,5 +298,5 @@ Additional Links
 ----------------
 * For a quick reference to more reST directives, check out the `reST primer <http://www.sphinx-doc.org/en/stable/rest.html#>`_
 * For a more detailed and complete list, check the documentation from `docutils <http://docutils.sourgeforge.net/docs/ref/rst/directives.html>`_
-    	 
+
 .. highlight:: python

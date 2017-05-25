@@ -7,9 +7,9 @@ Introduction to Flask
 * :ref:`flask_introduction_flask_templates`
 * :ref:`flask_introduction_flask_advance_routes`
 * :ref:`flask_introduction_flask_blueprints`
-  
+
 .. highlight:: none
-  
+
 .. _flask_introduction_flask_layout:
 
 Flask Layout
@@ -18,22 +18,22 @@ The standard Flask app directory tree looks something like:
 ::
 
    Parent Directory/
-   |___ app.py        // this Python file contains the code for running your app; may
+   |--- app.py        // this Python file contains the code for running your app; may
    |                  // be renamed to something else
    |
-   |___ templates     // has to be named 'templates'; place all your html files here
+   |--- templates/    // has to be named 'templates'; place all your HTML files here
    |
-   |___ static        // only the 'static' directory is open for public access; store
-   |                  // all your js, css, images, and etc here
+   |--- static/       // only the 'static' directory is open for public access; store
+   |                  // all your JS, CSS, images, and etc here
    |
-   |___ utils/        // named 'utils' by convention; place all your other Python code here
+   |--- utils/        // named 'utils' by convention; place all your other Python code here
    |
-   |___ data/         // named 'data' by convention; place all your data files here
+   |--- data/         // named 'data' by convention; place all your data files here
 
-.. highlight:: python   
+.. highlight:: python
 
 .. _flask_introduction_basic_flask:
-	       
+
 Basic Flask
 -----------
 Let us start with a basic Flask app:
@@ -47,17 +47,17 @@ Let us start with a basic Flask app:
    # Note: 'app' is the name used by convention, but may differ
    app = Flask(__name__)
 
-   # The route decorator is used to tell Flask what URL should run the function
-   # The '/' denotes root and is the page that is loaded by default (aka the home page)
+   # The route decorator is used to tell Flask which URL should run the function
+   # '/' denotes root and is the page that is loaded by default (aka the home page)
    @app.route('/')
-   def home():                    # Standard function definition, name need not match the route
-       return 'Hello World!'      # Return text that would be rendered in the browser
+   def home():                  # Standard function definition, name need not match the route
+       return 'Hello World!'    # Return text that would be rendered in the browser
 
    # If the program is ran directly instead of imported...
    if __name__ == '__main__':
 
-       # Turn on debugging, enabling more specific error messages and restart the Flask
-       # app upon code changes
+       # Turn on debugging, enable more specific error messages, and restart the Flask app
+       # upon code changes
        app.debug = True
 
        # Run the app
@@ -66,18 +66,18 @@ Let us start with a basic Flask app:
        # By default the host is 127.0.0.1 (localhost) and the port is 5000
        # Access the site by entering host:port (127.0.0.1:5000) into your browser
 
-       # You may change the port or the host by giving app.run() extra parameters
+       # You may change the host or the port by giving app.run() extra parameters
        # Ex: app.run(host='192.0.0.1', port=8000) would change the address to 192.0.0.1:8000
 
        # Note: Ports under 1024 are restricted to those with sudo access on Unix machines
        #       port 80 is the default HTTP port
        #       port 443 is the default HTTPS port
-   
+
 .. _flask_introduction_flask_routes:
 
 Flask Routes
 ------------
-In Flask, the ``route()`` decorator is used to bind URL(s) to a function.  Every time you access the route
+In Flask, the ``route`` decorator is used to bind URL(s) to a function.  Every time you access the route
 in your browser, the corresponding function is called.  The name of the function does not need to match
 the route.
 
@@ -92,8 +92,8 @@ Here is a basic example:
    def home():
        return 'Hello World!'
 
-In the example above, ``app`` in ``@app.route('/')`` corresponds to the name of the variable you assign
-to the instance of the Flask class.  All routes should start with ``/`` which is the root.
+In the example above, ``app`` in ``@app.route('/')`` corresponds to the name of the variable you bound the
+instance of the Flask class to.  All routes should start with ``/`` (at the root).
 
 Here is a more complex example:
 ::
@@ -112,11 +112,12 @@ Here is a more complex example:
    def language():
        return 'Python'
 
-Note that not all pages in your routes needs to be defined.  In the example above, the ``favorites`` page
-and the ``programming`` page were never defined but you can still access the ``languages`` page.
+Note that not all intermediate pages in your routes needs to be defined.  In the example above, the
+``favorites`` page and the ``programming`` page were never defined but you can still access the
+``languages`` page.
 
-When writing your Flask app, it would be helpful to know the url that a function is bound to.  To build
-the url when given the function name, use the following format:
+When writing your Flask app, it would be helpful to know the URL that a function is bound to.  To build
+the URL when given the function name, use the following format:
 ::
 
    from flask import url_for
@@ -131,12 +132,12 @@ Flask Templates
 In IntroCS2, the way you would render HTML is by printing HTML source code.  Why is this bad?
 
   * Does not allow for modular design; it is hard to reuse code
-  * Squeeze all your HTML and Python together, creating a mess
+  * Squashed all your HTML and Python together, created a mess
 
 So, how can Flask templates fix this?
 
   * Reuse your HTML code with inheritance
-  * Separates the HTML and Python code into HTML files and Python files (usually)
+  * Separates the HTML and Python code into separate files (usually)
   * Allows you to store Python variables and run Python functions directly in your HTML file
 
 Sounds too good to be true?  Try it out!  Here is some sample HTML code to be placed into your templates
@@ -146,21 +147,21 @@ folder.
    Most of your HTML files will be located in the templates folder.
 
 .. highlight:: html
-   
+
 ::
 
    <!DOCTYPE html>
    <html>
        <body>
-           <h1>Hello World!</h1>
+	   <h1>Hello World!</h1>
 	   <!-- Use <strong instead of <b> and <em> instead of <i> (HTML5 standard) -->
 	   <p><strong><em>This is the best web page ever!!</em></strong></p>
        </body>
    </html>
 
 .. highlight:: python
-   
-In your Flask app, revise the function definition for home:
+
+In your Flask app, revise the function definition for ``home()``:
 ::
 
    # Replace the import statement at the top with the following:
@@ -187,11 +188,10 @@ there...
    <!DOCTYPE html>
    <html>
        <body>
-           {# This is a comment #}
+	   {# This is a comment #}
 	   <h1>Hello World!</h1>
 
-	   {# Python if statements can be used if you wrapped them with {% %} #}
-	   {# No colon is necessary #}
+	   {# Python if statements can be used if you wrapped them with {% %}, no colons #}
 	   {% if 1 == 1 %}
 	   <p><strong><em>This is the best web page ever!</em></strong></p>
 
@@ -221,12 +221,12 @@ there...
    </html>
 
 .. highlight:: python
-   
+
 Simply refresh the page to see the changes.
 
 .. warning::
-   The Python subset in HTML templates is really limited since we do not really want to combine the two in
-   one file.  The main goal is to ease repetitive tasks such as creating a large table.
+   The Python subset in HTML templates is really limited since we do not really want to combine the two
+   languages in one file.  The main goal is to ease repetitive tasks such as creating a large table.
 
 .. _flask_introduction_flask_advance_routes:
 
@@ -244,13 +244,12 @@ parameters for the function it is bound to.  Here is a basic example:
    def home(page):
        return render_template(page)
 
-In the example above, the ``home()`` function is taking a parameter, ``page``.  To declare that a portion
-of the route is a variable, enclose it with < and >.  The content must match the name of the parameter.
+In the example above, the ``home()`` function is taking a parameter, ``page``.  To declare a variable in
+the route, enclose the name with ``<`` and ``>``. The variable name must match the name of the parameter.
 
 .. important::
-   When you declare a variable in the in the route, you need to declare that variable as a parameter in
-   the function definition and vice versa.  The only exception is when you declare that parameter with a
-   default value.
+   When you declare a variable in the route, you need to declare that variable as a parameter in the
+   function definition and vice versa.  The only exception is when you gave the parameter a default value.
 
 Let us look at a more complex example:
 ::
@@ -267,24 +266,24 @@ Let us look at a more complex example:
 There are a couple of new concepts here.  First, it is perfectly legal to bind one function to multiple
 routes.  The syntax for doing so is shown in the example above.
 
-The order you declared the routes does not matter.  Instead routing is done by certain rules prescribed by
-werkzeug.  These rules are:
+The order you declared the routes does not matter.  Instead, routing is done by certain rules prescribed
+by werkzeug.  These rules are:
 
 1. Routes without variables are chosen before routes with variables
 2. Shorter routes are preferred over longer routes
 
-In the example above, should the user navigate to the first route, ``filename`` is not specified and so
-the parameter would take on the default value.
+Why bother with two routes?  In the example above, should the user navigate to the first route,
+``filename`` is not specified and so ``filename`` would take on the default value.
 
-Another new concept is ``<path:filename>``.  This special format tells Flask to treat the rest of the url
-as a path; this would usually be the path for a file.  Otherwise, Flask would split the url into multiple
+Another new concept is ``<path:filename>``.  This special format tells Flask to treat the rest of the URL
+as a path; this would usually be the path for a file.  Otherwise, Flask would split the URL into multiple
 pieces instead of treating it as one value.
 
-Lastly, the ``send_static_file`` instance method of the Flask class (``app``) is new to you.  This method
-allows you to send static files from the static folder to the browser.  This means that ``filename`` in
-the example above should be found in the static folder.
+Lastly, the ``send_static_file()`` instance method of the Flask class (``app``) is new to you.  This
+method allows you to send static files from the static folder to the browser.  This means that
+``filename`` (in the example above) should be found in the static folder.
 
-Another thing to note is the usage of ``send_static_file`` in files utilizing ``Blueprint``.  In those
+Another thing to note is the usage of ``send_static_file()`` in files utilizing ``Blueprint``.  In those
 files, you would use the following format instead:
 ::
 
@@ -340,9 +339,9 @@ When binding a function to a route, use the name you bound the instance of ``Blu
 In this example, we would still use ``private_views`` instead of ``app`` because it is the name of the
 instance that matters, not the name of the blueprint.  So why do we care about the name of the blueprint?
 
-If we want to build an url using ``url_for``, we would need to use the name of the blueprint.  ``url_for``
-is a function that returns the url for a given function.  For example, to get the url for the
-``resources()`` function in the example above, we would write the following snippet:
+If we want to build an URL using ``url_for()``, we would need to use the name of the blueprint.
+``url_for()`` is a function that returns the URL for a given function.  For example, to get the URL for
+the ``resources()`` function in the example above, we would write the following snippet:
 ::
 
    from flask import url_for
@@ -351,5 +350,9 @@ is a function that returns the url for a given function.  For example, to get th
    url_for('private.resources')
 
 .. important::
+   When using ``url_for()`` to retrieve the URL for a function inside the main Flask file, you would use
+   ``url_for('function_name')``.  For a function routed via an instance of ``Blueprint``, you would use
+   ``url_for('blueprint_name.function_name')``.
+
    If you are inside the main Flask app, you can simply use ``url_for('function_name')``.  If you are in a
    file utilizing ``Blueprint`` you need ``url_for('blueprint_name.function_name')``.
