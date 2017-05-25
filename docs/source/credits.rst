@@ -1,0 +1,16 @@
+Credits
+=======
+
+The Original Founders of Dojo Docs
+----------------------------------
+* PChan
+* Kenneth
+* WX (DubX)
+* Jackie Woo
+* Jake Zaia
+* Leo Liu
+* Shakil Rafi
+
+Contributors of Dojo Docs
+-------------------------
+* PChan

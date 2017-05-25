@@ -32,10 +32,13 @@ Welcome to Dojo Website's documentation!
    :maxdepth: 3
    :caption: ReST Documentation
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Extras
+
+   credits
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`
