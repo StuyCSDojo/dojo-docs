@@ -298,5 +298,3 @@ Additional Links
 ----------------
 * For a quick reference to more reST directives, check out the `reST primer <http://www.sphinx-doc.org/en/stable/rest.html#>`_
 * For a more detailed and complete list, check the documentation from `docutils <http://docutils.sourgeforge.net/docs/ref/rst/directives.html>`_
-
-.. highlight:: python

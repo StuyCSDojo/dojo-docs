@@ -2,7 +2,13 @@ Running the Flask App
 =====================
 
 * :ref:`running_app_locally`
+
+  * :ref:`running_app_locally_activating_virtualenv`
+  * :ref:`running_app_locally_running_it`
+  * :ref:`running_app_locally_running_it`
 * :ref:`running_app_publicly`
+
+.. highlight:: none
 
 .. _running_app_locally:
 
@@ -13,6 +19,8 @@ your changes on a local machine before integrating them on the production server
 keep the website running without downtime, ironing out all errors before merging the changes is very
 important.  So how would you do this?
 
+.. _running_app_locally_activating_virtualenv:
+
 Activate the Virtualenv
 ^^^^^^^^^^^^^^^^^^^^^^^
 * Open up a terminal or command prompt and navigate into the virtualenv directory
@@ -21,11 +29,15 @@ Activate the Virtualenv
   * On Windows, the command is: ``Scripts\activate``
   * On Unix, the command is: ``source bin/activate``
 
+.. _running_app_locally_running_it:
+
 Running the App
 ^^^^^^^^^^^^^^^
 * Using the terminal, navigate to the git repo of your interest (*dojo-website*, *dojo-docs*, *dojo-resources*)
 * Navigate into the app folder to find the ``api.py`` file
 * Run the app via the following command: ``python api.py``
+
+.. _running_app_locally_accessing_it:
 
 Accessing the Site
 ^^^^^^^^^^^^^^^^^^

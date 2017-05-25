@@ -451,9 +451,9 @@ commands instead:</p>
 to narrow the focus of the command to specific documents/fields.</p>
 <p><em>update</em> can just be a dictionary, in which case it will replace any matches of <em>filter</em> in the
 collection.  For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">db</span><span class="o">.</span><span class="n">collection</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;hello&#39;</span><span class="p">},</span> <span class="p">{</span><span class="s1">&#39;first_name&#39;</span><span class="p">,</span> <span class="s1">&#39;bye&#39;</span><span class="p">})</span>
+<div class="highlight-none"><div class="highlight"><pre><span></span>db.collection.update({&#39;name&#39;: &#39;hello&#39;}, {&#39;first_name&#39;, &#39;bye&#39;})
 
-<span class="o">//</span> <span class="n">Replace</span> <span class="n">the</span> <span class="n">first</span> <span class="n">key</span><span class="o">-</span><span class="n">value</span> <span class="n">pair</span> <span class="k">with</span> <span class="n">the</span> <span class="n">second</span> <span class="n">key</span><span class="o">-</span><span class="n">value</span> <span class="n">pair</span>
+// Replace the first key-value pair with the second key-value pair
 </pre></div>
 </div>
 <p><em>update</em> allows for greater control of how you modify the database should you decide to use it with the

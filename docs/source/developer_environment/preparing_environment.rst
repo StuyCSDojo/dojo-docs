@@ -264,5 +264,3 @@ Installing Dependencies
 
 .. note::
    The requirements.txt file contains a list of dependencies in a format readable by Pip and humans.
-
-.. highlight:: python

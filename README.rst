@@ -24,6 +24,10 @@ Please adhere to the following rules:
 * Use "=" for title documents, "-" for title of sections, and "^" for title of subsections
 * Use the |br| custom directives to move text to the next line
 * Insert a newline when you want an actual line break
+* Unlike all the other repositories, the default highlighting language should be ``none``
+
+  * Simulate this behavior by stating ``.. highlight:: none`` at the top of every file (below the outline)
+  * Only exception is when the majority of the code block needs to be highlighted in a different language
 * For all sections, use the following format for labels:
   ::
 
@@ -37,8 +41,6 @@ Basic Structure:
    .. Custom directives goes here
 
    .. Title of the document goes here, underlined with "="
-
-   .. The author's name and the date in italics
 
    .. Page outline in bullet point format
 
@@ -59,8 +61,6 @@ Example:
 
    Example Document
    ================
-
-   *Written by <author name> on <year-month-day>*
 
    * :ref:`section_name_1`
    * :ref:`section_name_2`

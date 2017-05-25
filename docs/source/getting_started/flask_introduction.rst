@@ -30,12 +30,12 @@ The standard Flask app directory tree looks something like:
    |
    |--- data/         // named 'data' by convention; place all your data files here
 
-.. highlight:: python
-
 .. _flask_introduction_basic_flask:
 
 Basic Flask
 -----------
+.. highlight:: python
+
 Let us start with a basic Flask app:
 ::
 

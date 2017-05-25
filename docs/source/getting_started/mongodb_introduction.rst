@@ -9,6 +9,8 @@ Introduction to MongoDB
   * :ref:`mongodb_introduction_older_versions`
   * :ref:`mongodb_introduction_newer_versions`
 
+.. highlight:: none
+
 .. _mongodb_introduction_overview:
 
 Overview
@@ -137,18 +139,12 @@ collection.  For example:
 
    // Replace the first key-value pair with the second key-value pair
 
-.. highlight:: python
-
-.. highlight:: none
-
 *update* allows for greater control of how you modify the database should you decide to use it with the
 update operators.  Here is an example:
 ::
 
    db.collection.update({'name': 'hello'}, { $set: {'first_name': 'bye'}})
    // Add the key-value pair {'first_name': 'bye'}
-
-.. highlight:: python
 
 Here are a few of the update operators and what they do:
 

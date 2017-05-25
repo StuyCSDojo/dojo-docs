@@ -271,7 +271,12 @@
   <div class="section" id="running-the-flask-app">
 <h1>Running the Flask App<a class="headerlink" href="#running-the-flask-app" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="#running-app-locally"><span class="std std-ref">Locally</span></a></li>
+<li><a class="reference internal" href="#running-app-locally"><span class="std std-ref">Locally</span></a><ul>
+<li><a class="reference internal" href="#running-app-locally-activating-virtualenv"><span class="std std-ref">Activate the Virtualenv</span></a></li>
+<li><a class="reference internal" href="#running-app-locally-running-it"><span class="std std-ref">Running the App</span></a></li>
+<li><a class="reference internal" href="#running-app-locally-running-it"><span class="std std-ref">Running the App</span></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#running-app-publicly"><span class="std std-ref">Publicly</span></a></li>
 </ul>
 <div class="section" id="locally">
@@ -281,7 +286,7 @@ your changes on a local machine before integrating them on the production server
 keep the website running without downtime, ironing out all errors before merging the changes is very
 important.  So how would you do this?</p>
 <div class="section" id="activate-the-virtualenv">
-<h3>Activate the Virtualenv<a class="headerlink" href="#activate-the-virtualenv" title="Permalink to this headline">¶</a></h3>
+<span id="running-app-locally-activating-virtualenv"></span><h3>Activate the Virtualenv<a class="headerlink" href="#activate-the-virtualenv" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Open up a terminal or command prompt and navigate into the virtualenv directory</li>
 <li>Run the activation script<ul>
@@ -292,7 +297,7 @@ important.  So how would you do this?</p>
 </ul>
 </div>
 <div class="section" id="running-the-app">
-<h3>Running the App<a class="headerlink" href="#running-the-app" title="Permalink to this headline">¶</a></h3>
+<span id="running-app-locally-running-it"></span><h3>Running the App<a class="headerlink" href="#running-the-app" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>Using the terminal, navigate to the git repo of your interest (<em>dojo-website</em>, <em>dojo-docs</em>, <em>dojo-resources</em>)</li>
 <li>Navigate into the app folder to find the <code class="docutils literal"><span class="pre">api.py</span></code> file</li>
@@ -300,7 +305,7 @@ important.  So how would you do this?</p>
 </ul>
 </div>
 <div class="section" id="accessing-the-site">
-<h3>Accessing the Site<a class="headerlink" href="#accessing-the-site" title="Permalink to this headline">¶</a></h3>
+<span id="running-app-locally-accessing-it"></span><h3>Accessing the Site<a class="headerlink" href="#accessing-the-site" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p class="first">While leaving the terminal/command prompt open, open up a web browser and in the address bar, enter:
 <code class="docutils literal"><span class="pre">127.0.0.1:5000</span></code></p>
@@ -322,7 +327,7 @@ important.  So how would you do this?</p>
 <p>To resolve these issues, you need to run it on a web server with 24/7 uptime.</p>
 <p>You will need to use a terminal emulator on Windows (ie <a class="reference external" href="/testing/private/resources/software_installation_and_tips/installation_instructions/file_transfer_utilities/installing_ssh_programs.html#installation-file-transfer-utilities-ssh-programs-installing-git-bash">Git Bash</a>)
 or a terminal on UNIX system for these commands:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>$ ssh &lt;username&gt;@dojo.stuycs.org
+<div class="highlight-none"><div class="highlight"><pre><span></span>$ ssh &lt;username&gt;@dojo.stuycs.org
 $ cd /projects/dojo-website/app
 $ source ../../dojo/bin/activate      // Activate the virtualenv
 $ ./start_server.sh

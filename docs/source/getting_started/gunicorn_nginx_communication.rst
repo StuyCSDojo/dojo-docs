@@ -8,6 +8,8 @@ Gunicorn and Nginx Communication
   * :ref:`gunicorn_nginx_communication_location_filtering`
   * :ref:`gunicorn_nginx_communication_nginx_as_reverse_proxy`
 
+.. highlight:: none
+
 .. _gunicorn_nginx_communication_nginx_benefits:
 
 Benefits of Nginx
@@ -20,7 +22,7 @@ Nginx provides many benefits over the server bundled with Flask:
 * Caches frequently accessed files (useful for resources section and static content)
 
 .. _gunicorn_nginx_communication_servers_communication:
-  
+
 Server Communication
 --------------------
 
@@ -36,7 +38,7 @@ Nginx only listens on the following ports:
   be handled by Nginx directly.
 
 .. _gunicorn_nginx_communication_location_filtering:
-  
+
 Location Filtering
 ^^^^^^^^^^^^^^^^^^
 We have defined multiple location filters in the config file (located at ``/etc/nginx/sites-available``)
@@ -52,7 +54,7 @@ This is because...
 * Nginx can cache files that are frequently accessed for even faster performance
 
 .. _gunicorn_nginx_communication_nginx_as_reverse_proxy:
-  
+
 Nginx as Reverse Proxy
 ^^^^^^^^^^^^^^^^^^^^^^
 Aside from the routes handled the aforementioned location filters, all other traffic are passed to
