@@ -1,21 +1,104 @@
 Dojo Documentation
 ==================
 
-* `What is Here?`_
-* `RST Convention`_
-* `Running the Flask App`_
-* `Serving it on the Droplet`_
+.. contents::
 
 What is Here?
 -------------
-This repository contains the files for the Dojo Website documentation.  There are three directories:
+This repository contains the files behind the Dojo Website documentation.  There are two directories:
 
 * **app/**
 
   * Contains the standalone Flask app for accessing the documentation (mainly used to test locally)
 * **docs/**
 
-  * Contains the rst source files and the corresponding html version
+  * Contains the rst source files and the corresponding html files
+  * Access is given only to developers and teachers
+
+Setting Things Up
+-----------------
+
+During Development
+^^^^^^^^^^^^^^^^^^
+This repository contains a standalone Flask app that is used to test your changes before pushing them to
+upstream.  Before modifying files in this repo, you should prepare the developer environment as per the
+instructions found at `Dojo Documentation <https://dojo.stuycs.org/docs>`_.
+
+Before running the Flask app, make sure you:
+
+* Activate the virtualenv
+
+  .. code-block:: bash
+
+     $ cd path/to/virtualenv
+     $ cd virtualenv
+     $ source bin/activate
+
+* Install and start up Mongod, instructions can be found `here <https://dojo.stuycs.org/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html>`_.
+
+Run the Flask app by:
+
+.. code-block:: bash
+
+   $ cd path/to/dojo-docs
+   $ cd dojo-docs/app
+   $ python api.py
+
+The first time you run the Flask app, make sure you:
+
+* Register an account at <http://localhost:5000/testing/register/>
+* Stop the Flask app
+* Promote yourself to developer privileges
+
+  .. code-block:: bash
+
+     $ cd lib/security
+     $ python
+     >>> from AuthManager import AuthManager
+     >>> auth_manager = AuthManager('dojo_website')
+     >>> auth_manager.make_admin(<your username>)
+     (True, 'User is now an admin!')
+     >>> exit()
+
+* Run the Flask app again
+
+  .. code-block:: bash
+
+     $ cd ../..
+     $ python api.py
+
+Production Server
+^^^^^^^^^^^^^^^^^
+On the local machine:
+
+.. code-block:: bash
+
+   $ cd path/to/virtualenv
+   $ cd virtualenv
+   $ source bin/activate
+   $ cd ..
+   $ mkdir testing_directory
+   $ cd testing_directory
+   $ git clone git@github.com:StuyCSDojo/dojo-docs
+   $ cd dojo-docs/app/
+   $ python api.py
+
+**Double check that the version accessible at** http://localhost:5000 **is what you want the other developers to
+see when they navigate to** http://dojo.stuycs.org/docs **.**
+
+On the production server:
+
+.. code-block:: bash
+
+   $ cd /projects/
+   $ source dojo/bin/activate
+   $ cd dojo-website/dojo-docs
+   $ git reset --hard && git pull
+   $ cd ..
+   $ ./start_server
+
+**If you run** ``git pull`` **at /projects/dojo-docs, the changes will be reflected at** http://dojo.stuycs.org/testing/docs
+**which is meant to serve a beta version of the documentation.**
 
 RST Convention
 --------------
@@ -86,39 +169,3 @@ Example:
    Section 2 Subsection 1
    ^^^^^^^^^^^^^^^^^^^^^^
    Text for subsection of Section 2
-
-Running the Flask App
----------------------
-There are two parts to running the Flask app:
-
-1. Virtualenv
-
-   a. Activating a previously prepared virtualenv (prepared with the instructions in part b)
-      ::
-
-	 $ cd /path/to/virtualenv
-	 $ source <virtualenv>/bin/activate
-
-   b. Preparing the virtualenv
-      ::
-
-	 $ virtualenv <name>
-	 $ source <name>/bin/activate
-	 $ cd /path/to/dojo-docs
-	 $ pip install -r dojo-docs/app/requirements.txt
-
-2. Flask App
-   ::
-
-      $ cd /path/to/dojo-docs
-      $ cd dojo-docs/app
-      $ python api.py
-
-Serving it on the Droplet
--------------------------
-To run it on the server, follow the following steps:
-::
-
-   $ source /projects/dojo/bin/activate
-   $ cd /projects/dojo-docs/app
-   $ ./start_server.sh
