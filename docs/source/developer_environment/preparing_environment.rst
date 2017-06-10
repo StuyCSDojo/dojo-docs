@@ -55,7 +55,7 @@ Install Git and Clone Repos
 Install Python and Configure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If you do not have Python installed or your version is not at least 2.7.9, follow the instructions
-  `here <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html#windows>`_ (uninstall the old version if necessary)
+  `here </testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html#windows>`_ (uninstall the old version if necessary)
 * At this point, if you are still using a previous installation, make sure that Python and Pip are on your
   path.  To check, run the following commands:
   ::
@@ -67,14 +67,14 @@ Install Python and Configure
   you an error, add ``C:\Python27\Scripts``.
 
   .. tip::
-     Not sure how to add a directory to your path?  Read the `Modifying Windows Path guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/software_tutorials/system/modifying_windows_path_tutorial.html>`_.
+     Not sure how to add a directory to your path?  Read the `Modifying Windows Path guide </testing/private/resources/software_installation_and_tips/software_tutorials/system/modifying_windows_path_tutorial.html>`_.
 
 .. _preparing_environment_windows_installing_mongodb:
 
 Download and Configure MongoDB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 MongoDB is one of the databases that you will learn in Software Development.  We are using it to store
-user credentials along with the announcements on the homepage.  Check the `Installing MongoDB for Windows guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html#windows>`_ for instructions to installing it.
+user credentials along with the announcements on the homepage.  Check the `Installing MongoDB for Windows guide </testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html#windows>`_ for instructions to installing it.
 
 .. _preparing_environment_windows_installing_virtualenv:
 
@@ -131,9 +131,9 @@ Unix
 
 Install Git and Clone Repos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you do not already have Git installed, check the `Installing Git guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_git.html>`_
-* For a brief introduction to Git, check the `Introduction to Git guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/software_tutorials/programming_tools/git_tutorial.html>`_
-* It is also recommended to set up SSH Keys, information can be found in the `SSH Keys guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/software_tutorials/remote_file_transfer/ssh_keys_tutorial.html>`_
+* If you do not already have Git installed, check the `Installing Git guide </testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_git.html>`_
+* For a brief introduction to Git, check the `Introduction to Git guide </testing/private/resources/software_installation_and_tips/software_tutorials/programming_tools/git_tutorial.html>`_
+* It is also recommended to set up SSH Keys, information can be found in the `SSH Keys guide </testing/private/resources/software_installation_and_tips/software_tutorials/remote_file_transfer/ssh_keys_tutorial.html>`_
 * Create a folder for the project and clone the Dojo Website repos inside that directory by running the
   following commands in the terminal:
   ::
@@ -149,14 +149,14 @@ Install Git and Clone Repos
 Install Python and Pip
 ^^^^^^^^^^^^^^^^^^^^^^
 Pip is the Python package manager that we would be using to install extra Python libraries.  For
-instructions on installing Pip and/or Python, check the `Installing Python and Pip guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html>`_.
+instructions on installing Pip and/or Python, check the `Installing Python and Pip guide </testing/private/resources/software_installation_and_tips/installation_instructions/programming_languages/installing_python.html>`_.
 
 .. _preparing_environment_unix_installing_mongodb:
 
 Install and configure MongoDB
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 MongoDB is one of the databases that you will learn in Software Development.  We are using it to store
-user credentials along with the announcements on the homepage.  Check the `Installing MongoDB  guide <https://dojo.stuycs.org/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html>`_ for instructions to installing it.
+user credentials along with the announcements on the homepage.  Check the `Installing MongoDB  guide </testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html>`_ for instructions to installing it.
 
 .. _preparing_environment_unix_installing_virtualenv:
 
