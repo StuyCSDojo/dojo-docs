@@ -66,8 +66,8 @@ def register():
     else:
         return flask.redirect(flask.url_for('security.register_form'))
 
-    @security.route('/testing/login/')
-    def login_form():
+@security.route('/testing/login/')
+def login_form():
     if is_logged_in():
         return flask.redirect(flask.url_for('public_views.home'))
     else:
