@@ -8,7 +8,7 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	    <title>Introduction to MongoDB</title>
+	    <title>Bjoernand Nginx Communication</title>
 	
 
 	
@@ -44,8 +44,8 @@
 		      href="../genindex.html"/>
 		<link rel="search" title="Search" href="../search.html"/>
 	    <link rel="top" title="Dojo Documentation 0.1.2 documentation" href="../index.html"/>
-		<link rel="next" title="Bjoernand Nginx Communication" href="bjoern_nginx_communication.html"/>
-		<link rel="prev" title="Introduction to reStructuredText" href="restructuredtext_introduction.html"/> 
+		<link rel="next" title="Credits" href="../credits.html"/>
+		<link rel="prev" title="Introduction to MongoDB" href="mongodb_introduction.html"/> 
 
 	
 	<script src="../_static/js/modernizr.min.js"></script>
@@ -184,23 +184,23 @@
 <li class="toctree-l2"><a class="reference internal" href="restructuredtext_introduction.html#additional-links">Additional Links</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction to MongoDB</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mongod-and-mongo">Mongod and Mongo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#basic-commands">Basic Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#basic-database-commands">Basic Database Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#older-versions">Older Versions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#newer-versions">Newer Versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mongodb_introduction.html">Introduction to MongoDB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mongodb_introduction.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongodb_introduction.html#mongod-and-mongo">Mongod and Mongo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongodb_introduction.html#basic-commands">Basic Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mongodb_introduction.html#basic-database-commands">Basic Database Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mongodb_introduction.html#older-versions">Older Versions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mongodb_introduction.html#newer-versions">Newer Versions</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="bjoern_nginx_communication.html">Bjoernand Nginx Communication</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bjoern_nginx_communication.html#benefits-of-nginx">Benefits of Nginx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bjoern_nginx_communication.html#server-communication">Server Communication</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="bjoern_nginx_communication.html#port-filtering">Port Filtering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bjoern_nginx_communication.html#location-filtering">Location Filtering</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bjoern_nginx_communication.html#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bjoernand Nginx Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#benefits-of-nginx">Benefits of Nginx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#server-communication">Server Communication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#port-filtering">Port Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#location-filtering">Location Filtering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nginx-as-reverse-proxy">Nginx as Reverse Proxy</a></li>
 </ul>
 </li>
 </ul>
@@ -259,7 +259,7 @@
     
 	<li><a href="../index.html">Documentation</a> &raquo;</li>
 	
-      <li>Introduction to MongoDB</li>
+      <li>Bjoernand Nginx Communication</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -276,223 +276,67 @@
 			<div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
 			    <div itemprop="articleBody">
 				
-  <div class="section" id="introduction-to-mongodb">
-<h1>Introduction to MongoDB<a class="headerlink" href="#introduction-to-mongodb" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="bjoernand-nginx-communication">
+<h1>Bjoernand Nginx Communication<a class="headerlink" href="#bjoernand-nginx-communication" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="#mongodb-introduction-overview"><span class="std std-ref">Overview</span></a></li>
-<li><a class="reference internal" href="#mongodb-introduction-mongod-and-mongo"><span class="std std-ref">Mongod and Mongo</span></a></li>
-<li><a class="reference internal" href="#mongodb-introduction-basic-commands"><span class="std std-ref">Basic Commands</span></a></li>
-<li><a class="reference internal" href="#mongodb-introduction-basic-database-commands"><span class="std std-ref">Basic Database Commands</span></a><ul>
-<li><a class="reference internal" href="#mongodb-introduction-older-versions"><span class="std std-ref">Older Versions</span></a></li>
-<li><a class="reference internal" href="#mongodb-introduction-newer-versions"><span class="std std-ref">Newer Versions</span></a></li>
+<li><a class="reference internal" href="#bjoern-nginx-communication-nginx-benefits"><span class="std std-ref">Benefits of Nginx</span></a></li>
+<li><a class="reference internal" href="#bjoern-nginx-communication-servers-communication"><span class="std std-ref">Server Communication</span></a><ul>
+<li><a class="reference internal" href="#bjoern-nginx-communication-port-filtering"><span class="std std-ref">Port Filtering</span></a></li>
+<li><a class="reference internal" href="#bjoern-nginx-communication-location-filtering"><span class="std std-ref">Location Filtering</span></a></li>
+<li><a class="reference internal" href="#bjoern-nginx-communication-nginx-as-reverse-proxy"><span class="std std-ref">Nginx as Reverse Proxy</span></a></li>
 </ul>
 </li>
 </ul>
-<div class="section" id="overview">
-<span id="mongodb-introduction-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>MongoDB is a cross-platform document-based database system that is taught in Software Development.  We
-will be using it to store login credentials, announcements, and possibly forum posts.</p>
-<p>First, let us cover some basic definitions:</p>
-<dl class="glossary docutils">
-<dt id="term-dynamic-schema">Dynamic Schema</dt>
-<dd>In the context of MongoDB, documents in a collection do not need to have the same structure/fields
-as each other.</dd>
-<dt id="term-database">Database</dt>
-<dd>A database is a container of collections.  Think of it as the master spreadsheet in Excel.  A
-MongoDB server typically contains multiple databases.</dd>
-<dt id="term-collection">Collection</dt>
-<dd>A collection is a group of MongoDB documents.  Think of it as the individual sheets in the master
-spreadsheet.</dd>
-<dt id="term-document">Document</dt>
-<dd>A document is a set of key-value pairs with a dynamic schema.  Think of it as the individual rows
-of a sheet in a master spreadsheet.</dd>
-<dt id="term-field">Field</dt>
-<dd>A field is a individual key-value pair.  Think of it as the individual columns of each row.</dd>
-<dt id="term-primary-key">Primary Key</dt>
-<dd>The default key _id provided by MongoDB automatically when you insert a document to distinguish
-that document from the others.</dd>
-</dl>
+<div class="section" id="benefits-of-nginx">
+<span id="bjoern-nginx-communication-nginx-benefits"></span><h2>Benefits of Nginx<a class="headerlink" href="#benefits-of-nginx" title="Permalink to this headline">¶</a></h2>
+<p>Nginx provides many benefits over the server bundled with Flask:</p>
+<ul class="simple">
+<li>Provide the gzip module to compress data before transfer (improve performance)</li>
+<li>Directly serve static content (and do so faster)</li>
+<li>Allows easy configuration of SSL encryption</li>
+<li>Caches frequently accessed files (useful for resources section and static content)</li>
+</ul>
 </div>
-<div class="section" id="mongod-and-mongo">
-<span id="mongodb-introduction-mongod-and-mongo"></span><h2>Mongod and Mongo<a class="headerlink" href="#mongod-and-mongo" title="Permalink to this headline">¶</a></h2>
-<p>If you have not already done so, follow the <a class="reference external" href="/testing/private/resources/software_installation_and_tips/installation_instructions/programming_tools/installing_mongodb.html">Installing MongoDB</a> guide to install MongoDB.</p>
-<p>Mongod is the service that starts up the MongoDB server.  The Mongo Shell is an interactive JavaScript
-interface to MongoDB and can be accessed by running <code class="docutils literal"><span class="pre">mongo</span></code> in your terminal.</p>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last">If you get an error, make sure that the MongoDB server is running (instructions are found in the
-installation guide).</p>
+<div class="section" id="server-communication">
+<span id="bjoern-nginx-communication-servers-communication"></span><h2>Server Communication<a class="headerlink" href="#server-communication" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="port-filtering">
+<span id="bjoern-nginx-communication-port-filtering"></span><h3>Port Filtering<a class="headerlink" href="#port-filtering" title="Permalink to this headline">¶</a></h3>
+<p>Nginx only listens on the following ports:</p>
+<ul class="simple">
+<li><strong>Port 80</strong> (<em>default HTTP port</em>): Users who accidentally navigate to the site under HTTP would be
+permanently redirected to use HTTPS.</li>
+<li><strong>Port 443</strong> (<em>default HTTPS port</em>): Traffic using HTTPS would either be routed by Nginx to Bjoern or
+be handled by Nginx directly.</li>
+</ul>
 </div>
+<div class="section" id="location-filtering">
+<span id="bjoern-nginx-communication-location-filtering"></span><h3>Location Filtering<a class="headerlink" href="#location-filtering" title="Permalink to this headline">¶</a></h3>
+<p>We have defined multiple location filters in the config file (located at <code class="docutils literal"><span class="pre">/etc/nginx/sites-available</span></code>)</p>
+<ul class="simple">
+<li>Requests accessing static files using the route (<code class="docutils literal"><span class="pre">/static</span></code>) would be served by Nginx directly</li>
+<li>Requests accessing content on the public resources page (<code class="docutils literal"><span class="pre">dojo.stuycs.org/resources</span></code>) is also served
+by Nginx directly</li>
+</ul>
+<p>This is because...</p>
+<ul class="simple">
+<li>No further processing is required for access to such files</li>
+<li>Serving files directly with Nginx is faster</li>
+<li>Nginx can cache files that are frequently accessed for even faster performance</li>
+</ul>
 </div>
-<div class="section" id="basic-commands">
-<span id="mongodb-introduction-basic-commands"></span><h2>Basic Commands<a class="headerlink" href="#basic-commands" title="Permalink to this headline">¶</a></h2>
-<p>Next, we will introduce you to a few of the basic commands for interacting with the database.  These
-commands are geared toward how to get help if you are lost.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Words in italics are meant to be replaced with actual names.  Ex: <em>collection</em> means insert the name of
-a collection here.</p>
-</div>
-<table border="1" class="docutils">
-<colgroup>
-<col width="34%" />
-<col width="66%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Commands</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>help</td>
-<td>Show help</td>
-</tr>
-<tr class="row-odd"><td>db.help()</td>
-<td>Show help for database methods</td>
-</tr>
-<tr class="row-even"><td>db.<em>collection</em>.help()</td>
-<td>Show help for collection methods</td>
-</tr>
-<tr class="row-odd"><td>show dbs</td>
-<td>Show/list all databases</td>
-</tr>
-<tr class="row-even"><td>use dbs</td>
-<td>Switch to a particular database</td>
-</tr>
-<tr class="row-odd"><td>show collections</td>
-<td>Show/list all collections of the selected database</td>
-</tr>
-<tr class="row-even"><td>exit</td>
-<td>Exit the Mongo Shell</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="basic-database-commands">
-<span id="mongodb-introduction-basic-database-commands"></span><h2>Basic Database Commands<a class="headerlink" href="#basic-database-commands" title="Permalink to this headline">¶</a></h2>
-<p>Now that you know how to get help and exit the shell, we will introduce you to commands for interacting
-with the databases.  These commands will allow you to modify the database directly for finer controls if
-there are no Python wrappers for the operation you wish to perform.</p>
-<div class="section" id="older-versions">
-<span id="mongodb-introduction-older-versions"></span><h3>Older Versions<a class="headerlink" href="#older-versions" title="Permalink to this headline">¶</a></h3>
-<p>On older versions of MongoDB (typically in school and on the droplet), you would need to use the following
-commands instead:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="60%" />
-<col width="40%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Database Commands</th>
-<th class="head">What it does</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>db.<em>collection</em>.insert()</td>
-<td>Insert a document into the collection</td>
-</tr>
-<tr class="row-odd"><td>db.<em>collection</em>.update()</td>
-<td>Update first occurence in the collection</td>
-</tr>
-<tr class="row-even"><td>db.<em>collection</em>.update(<em>filter</em>, <em>update</em>, {multi: true})</td>
-<td>Update all occurences in the collection</td>
-</tr>
-<tr class="row-odd"><td>db.<em>collection</em>.remove()</td>
-<td>Delete all documents in the collection</td>
-</tr>
-<tr class="row-even"><td>db.<em>collection</em>.remove(<em>filter</em>, 1)</td>
-<td>Delete first occurence in the collection</td>
-</tr>
-<tr class="row-odd"><td>db.<em>collection</em>.remove(<em>filter</em>)</td>
-<td>Delete all occurences in the collection</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last"><em>filter</em> and <em>update</em> are discussed below.</p>
-</div>
-</div>
-<div class="section" id="newer-versions">
-<span id="mongodb-introduction-newer-versions"></span><h3>Newer Versions<a class="headerlink" href="#newer-versions" title="Permalink to this headline">¶</a></h3>
-<table border="1" class="docutils">
-<colgroup>
-<col width="49%" />
-<col width="51%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Database Commands</th>
-<th class="head">What it does</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>db.<em>collection</em>.find()</td>
-<td>Display all data in that collection</td>
-</tr>
-<tr class="row-odd"><td>db.<em>collection</em>.find(<em>filter</em>)</td>
-<td>Display all data matching the search query</td>
-</tr>
-<tr class="row-even"><td>db.<em>collection</em>.insertOne(<em>filter</em>)</td>
-<td>Insert a document into the collection</td>
-</tr>
-<tr class="row-odd"><td>db.<em>collection</em>.insertMany(<em>filter</em>)</td>
-<td>Insert multiple documents into the collection at once</td>
-</tr>
-<tr class="row-even"><td>db.<em>collection</em>.updateOne(<em>filter</em>, <em>update</em>)</td>
-<td>Update first occurence in the collection</td>
-</tr>
-<tr class="row-odd"><td>db.<em>collection</em>.updateMany(<em>filter</em>, <em>update</em>)</td>
-<td>Update all occurences in the collection</td>
-</tr>
-<tr class="row-even"><td>db.<em>collection</em>.deleteOne(<em>filter</em>)</td>
-<td>Delete the first occurence in the collection</td>
-</tr>
-<tr class="row-odd"><td>db.<em>collection</em>.deleteMany(<em>filter</em>)</td>
-<td>Delete all occurences in the collection</td>
-</tr>
-<tr class="row-even"><td>db.<em>collection</em>.drop()</td>
-<td>Remove the entire collection</td>
-</tr>
-</tbody>
-</table>
-<p><em>filter</em> is a dictionary of key-value pairs (basically a Python dictionary).  The dictionary will be used
-to narrow the focus of the command to specific documents/fields.</p>
-<p><em>update</em> can just be a dictionary, in which case it will replace any matches of <em>filter</em> in the
-collection.  For example:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>db.collection.update({&#39;name&#39;: &#39;hello&#39;}, {&#39;first_name&#39;, &#39;bye&#39;})
-
-// Replace the first key-value pair with the second key-value pair
-</pre></div>
-</div>
-<p><em>update</em> allows for greater control of how you modify the database should you decide to use it with the
-update operators.  Here is an example:</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>db.collection.update({&#39;name&#39;: &#39;hello&#39;}, { $set: {&#39;first_name&#39;: &#39;bye&#39;}})
-// Add the key-value pair {&#39;first_name&#39;: &#39;bye&#39;}
-</pre></div>
-</div>
-<p>Here are a few of the update operators and what they do:</p>
-<table border="1" class="docutils">
-<colgroup>
-<col width="26%" />
-<col width="74%" />
-</colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Update Operator</th>
-<th class="head">Description</th>
-</tr>
-</thead>
-<tbody valign="top">
-<tr class="row-even"><td>$rename</td>
-<td>Renames a field</td>
-</tr>
-<tr class="row-odd"><td>$set</td>
-<td>Sets the value of a field in the document</td>
-</tr>
-<tr class="row-even"><td>$unset</td>
-<td>Removes the specified field in the document</td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="nginx-as-reverse-proxy">
+<span id="bjoern-nginx-communication-nginx-as-reverse-proxy"></span><h3>Nginx as Reverse Proxy<a class="headerlink" href="#nginx-as-reverse-proxy" title="Permalink to this headline">¶</a></h3>
+<p>Aside from the routes handled the aforementioned location filters, all other traffic are passed to
+Bjoern, a C WSGI server that is used instead of the server bundled in Flask for faster performance,
+via a Unix socket.  Responses from Bjoern is sent back to the client via Nginx as a reverse proxy.</p>
+<p>Key Notes:</p>
+<ul class="simple">
+<li>Nginx reduces the workload for Bjoern by handling static files</li>
+<li>Nginx as a reverse proxy allows responses from Bjoern to be tunneled under HTTPS for extra security
+(SSL encryption is implemented for Nginx)</li>
+<li>Nginx as a reverse proxy accepts the client connection on Bjoern&#8217;s behalf, freeing up Gunicorn workers
+to spend more time handling requests instead of waiting for client to respond</li>
+</ul>
 </div>
 </div>
 </div>
@@ -507,10 +351,10 @@ update operators.  Here is an example:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="bjoern_nginx_communication.html" class="btn btn-neutral float-right" title="Bjoernand Nginx Communication" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../credits.html" class="btn btn-neutral float-right" title="Credits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="restructuredtext_introduction.html" class="btn btn-neutral" title="Introduction to reStructuredText" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="mongodb_introduction.html" class="btn btn-neutral" title="Introduction to MongoDB" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

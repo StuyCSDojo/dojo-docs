@@ -1,16 +1,16 @@
-Gunicorn and Nginx Communication
-================================
+Bjoernand Nginx Communication
+=============================
 
-* :ref:`gunicorn_nginx_communication_nginx_benefits`
-* :ref:`gunicorn_nginx_communication_servers_communication`
+* :ref:`bjoern_nginx_communication_nginx_benefits`
+* :ref:`bjoern_nginx_communication_servers_communication`
 
-  * :ref:`gunicorn_nginx_communication_port_filtering`
-  * :ref:`gunicorn_nginx_communication_location_filtering`
-  * :ref:`gunicorn_nginx_communication_nginx_as_reverse_proxy`
+  * :ref:`bjoern_nginx_communication_port_filtering`
+  * :ref:`bjoern_nginx_communication_location_filtering`
+  * :ref:`bjoern_nginx_communication_nginx_as_reverse_proxy`
 
 .. highlight:: none
 
-.. _gunicorn_nginx_communication_nginx_benefits:
+.. _bjoern_nginx_communication_nginx_benefits:
 
 Benefits of Nginx
 -----------------
@@ -21,12 +21,12 @@ Nginx provides many benefits over the server bundled with Flask:
 * Allows easy configuration of SSL encryption
 * Caches frequently accessed files (useful for resources section and static content)
 
-.. _gunicorn_nginx_communication_servers_communication:
+.. _bjoern_nginx_communication_servers_communication:
 
 Server Communication
 --------------------
 
-.. _gunicorn_nginx_communication_port_filtering:
+.. _bjoern_nginx_communication_port_filtering:
 
 Port Filtering
 ^^^^^^^^^^^^^^
@@ -34,10 +34,10 @@ Nginx only listens on the following ports:
 
 * **Port 80** (*default HTTP port*): Users who accidentally navigate to the site under HTTP would be
   permanently redirected to use HTTPS.
-* **Port 443** (*default HTTPS port*): Traffic using HTTPS would either be routed by Nginx to Gunicorn or
+* **Port 443** (*default HTTPS port*): Traffic using HTTPS would either be routed by Nginx to Bjoern or
   be handled by Nginx directly.
 
-.. _gunicorn_nginx_communication_location_filtering:
+.. _bjoern_nginx_communication_location_filtering:
 
 Location Filtering
 ^^^^^^^^^^^^^^^^^^
@@ -53,18 +53,18 @@ This is because...
 * Serving files directly with Nginx is faster
 * Nginx can cache files that are frequently accessed for even faster performance
 
-.. _gunicorn_nginx_communication_nginx_as_reverse_proxy:
+.. _bjoern_nginx_communication_nginx_as_reverse_proxy:
 
 Nginx as Reverse Proxy
 ^^^^^^^^^^^^^^^^^^^^^^
 Aside from the routes handled the aforementioned location filters, all other traffic are passed to
-Gunicorn, a Python HTTP server that is used instead of the server bundled in Flask for faster performance,
-via a Unix socket.  Responses from Gunicorn is sent back to the client via Nginx as a reverse proxy.
+Bjoern, a C WSGI server that is used instead of the server bundled in Flask for faster performance,
+via a Unix socket.  Responses from Bjoern is sent back to the client via Nginx as a reverse proxy.
 
 Key Notes:
 
-* Nginx reduces the workload for Gunicorn by handling static files
-* Nginx as a reverse proxy allows responses from Gunicorn to be tunneled under HTTPS for extra security
+* Nginx reduces the workload for Bjoern by handling static files
+* Nginx as a reverse proxy allows responses from Bjoern to be tunneled under HTTPS for extra security
   (SSL encryption is implemented for Nginx)
-* Nginx as a reverse proxy accepts the client connection on Gunicorn's behalf, freeing up Gunicorn workers
+* Nginx as a reverse proxy accepts the client connection on Bjoern's behalf, freeing up Gunicorn workers
   to spend more time handling requests instead of waiting for client to respond

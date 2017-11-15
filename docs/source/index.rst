@@ -22,7 +22,7 @@ Welcome to Dojo Website's documentation!
    getting_started/advance_python_part_2
    getting_started/restructuredtext_introduction
    getting_started/mongodb_introduction
-   getting_started/gunicorn_nginx_communication
+   getting_started/bjoern_nginx_communication
 
 .. toctree::
    :maxdepth: 3
