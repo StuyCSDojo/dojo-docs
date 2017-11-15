@@ -1,5 +1,5 @@
-Bjoernand Nginx Communication
-=============================
+Bjoern and Nginx Communication
+==============================
 
 * :ref:`bjoern_nginx_communication_nginx_benefits`
 * :ref:`bjoern_nginx_communication_servers_communication`
